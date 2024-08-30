@@ -1,5 +1,5 @@
 .Sobre{
-    height: 1161px;
+    height: 1177px;
 }
 
 
@@ -39,12 +39,13 @@
 .imgmulherubanda {
     position: relative;
     left: 84.7%;
+    top: 40%;
  
 }
 
 .flor {
     position: relative;
-    left: 100px;
+    left: -14.7%;
 
 }
 
@@ -59,7 +60,7 @@
 
 .containerblack {
     position: relative;
-    top: 221px;
+    top: 21.8%;
 
 }
 
@@ -84,7 +85,7 @@
     color: #0C0400;
     opacity: 67%;
     position: relative;
-    top: 135px;
+    top: 185px;
     right: 22%;
     text-transform: uppercase;
 

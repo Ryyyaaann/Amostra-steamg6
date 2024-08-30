@@ -1,4 +1,4 @@
-import '../App.css';
+import '../css/home.css';
 
 function Imagem(){
     return (

@@ -5,9 +5,8 @@
     font-family: 'Roboto';
     padding: 0.7%;
     line-height: 2;
-    position: relative;
-    bottom: 200px;
-    margin: 0 auto;
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.3);
+    height: A;
     
 }
 
@@ -18,7 +17,7 @@
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
-  bottom: 20px;
+  bottom: 2%;
   
 }
 
@@ -26,43 +25,36 @@
   flex: 1;
 }
 
-.footer-heading {
-  position: relative;
-  font-size: 24px;
-  right: 80px;
-  margin-bottom: 20px;
-}
-
 .footer-heading1 {
   position: relative;
   font-size: 24px;
-  right: 85px;
+  right: 22%;
   color: black;
-  top: 1px;
-  margin-bottom: 20px;
+  top: 0.3%;
+  
 }
 
 .footer-heading2 {
   position: relative;
   font-size: 24px;
-  right: 5px;
+  right: 3%;
   color: black;
-  top: 1px;
-  margin-bottom: 20px;
+  top: 0.3%;
+  
 }
 
 .footer-heading3 {
   position: relative;
   font-size: 24px;
-  left: 5px;
+  left: 2%;
   color: black;
-  top: 1px;
-  margin-bottom: 20px;
+  top: 0.3%;
+  
 }
 
 .footer-description {
     position: relative;
-    right: 100px;
+    right: 27%;
     font-size: 18px;
     line-height: 1.5;
     color: black;
@@ -75,7 +67,7 @@
 }
 
 .footer-links li {
-  margin-bottom: 10px;
+  margin-bottom: 1%;
 }
 
 
@@ -96,14 +88,14 @@
 }
   
   .social-links li {
-    margin-bottom: 10px;
+    margin-bottom: 2.1%;
 }
   
   .social-links a {
     color: #fff;
     text-decoration: none;
     font-size: 24px;
-    margin-right: 15px;
+    
 }
 
 .social-links a svg {
@@ -120,7 +112,6 @@
   
   .footer-bottom {
     text-align: center;
-    margin-top: 20px;
 }
   
   .footer-bottom p {
