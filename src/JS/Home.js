@@ -13,11 +13,9 @@ function Home(){
                     <p>compartilhar -</p>
                     <p>Woman Space.</p>
                 </div>
-                <div className='BotaoLogin'>
-                    <button class="yellow-button-login"><Link to="/login " className="cad-link">Login</Link></button>
-                </div>
-                <div className='BotaoSignUp'>
-                    <button class="blue-button-signup"><Link to="/cadastro" className="cad-link">Cadastro</Link></button>
+                <div className="button-section">
+                    <Link to="/login" className="button yellow-button">Login</Link>
+                    <Link to="/cadastro" className="button blue-button">Cadastro</Link>
                 </div>
             </div>
     )

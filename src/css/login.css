@@ -1,120 +1,153 @@
-.form-titulo {
-    position: relative;
-    font-family: Light;
-    text-align: center;
-    color: #333;
-    bottom: 30px;
-}
-
-.Botao-Google {
-    position: relative;
-    display: block;
-    width: 80%;
-    margin: 0 auto 30px;
-    background-color: transparent;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    top: 20px;
-    cursor: pointer;
-    border: none;
+.tudoo {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-login {
     width: 400px;
-    height: 400px;
-    background-color: white;
-    border-radius: 4%;
-    box-shadow: 2px 4px 4px 2px #727070;
-    margin: 50px auto;
-    padding: 50px;
-    text-align: center;
-    z-index: 1;
-    margin-bottom: 560px; 
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    border-radius: 5%;
-}
-
-input {
+    background: #fff;
+    padding: 40px 30px;
     border-radius: 8px;
-    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: relative;
+    top: -100px;
+    animation: fadeIn 0.7s ease-in-out;
 }
 
-.form-username {
-    position: relative;
+.form-titulo {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.Botao-Google {
     width: 100%;
-    padding: 10px;
-    bottom: 10px;
-    top: 10px;
-}
-
-.form-password {
-    position: relative;
-    width: 100%;
-    padding: 10px;
-    bottom: 10px;
-    top: 10px;
-}
-
-.form-submit {
-    position: relative;
-    background-color: #000;
+    background-color: #4285F4;
     color: white;
-    padding: 10px 20px;
-    border: 2px solid transparent;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 25px;
+    border: none;
     cursor: pointer;
-    width: 150px;
-    height: 44px;
-    align-self: center;
+    transition: background-color 0.3s ease;
+}
+
+.Botao-Google:hover {
+    background-color: #357ae8;
+}
+
+.Google-Imagem {
+    width: 24px;
+    margin-right: 12px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 77%;
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+
+.form-username,
+.form-password {
+    width: 100%;
+    padding: 12px 50px 12px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 16px;
-    border-radius: 9px;
-    bottom: 85px;
-    transition: border-color 0.5s;
+    transition: border-color 0.3s ease;
 }
 
-.form-submit:hover {
-    border-color: grey;
+.form-username:focus,
+.form-password:focus {
+    border-color: #1a237e;
+    outline: none;
 }
 
-.esqueceu-senha {
-    position:relative;
-    right: 137px;
-    bottom: 45px;
-    color: #010048;
-    font-size: calc(12px);
+.password-toggle {
+    position: absolute;
+    right: -25%;
+    top: 52%;
+    transform: translateY(-50%);
     cursor: pointer;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.esqueceu-senha:hover{
-    text-decoration: underline;
+    color: #888;
 }
 
 .error-message {
-    position: relative;
     color: #e2031a;
-    top: -132px;
-    font-size: calc(18px);
-  }
-  
-  .Google-Imagem{
-    width: 45px;
-    position: relative;
-    top: 15px;
-    right:15px
-  }
+    font-size: 16px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
 
-  @media (max-width: 1280px) {
-    .tudoo {
-        font-size: 14px;
+.extras {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.lembre-me {
+    font-size: 16px;
+}
+
+.esqueceu-senha {
+    font-size: 16px;
+    color: #1a237e;
+    text-decoration: none;
+}
+
+.esqueceu-senha:hover {
+    text-decoration: underline;
+}
+
+.form-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #1a237e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+    background-color: #3949ab;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
-    
+
+@media (max-width: 1280px) {
+    .tudoo {
+        font-size: 16px;
+    }
+}

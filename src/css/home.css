@@ -23,55 +23,42 @@
     
   }
 
-  .yellow-button-login {
-    background-color: #f3cf00fb;
-    color: black;
-    font-size: 38px;
-    font-style: bold;
-    font-family: 'Roboto';
-    padding: 5px 55px;
-    border: none;
-    cursor: pointer;
+  .button-section {
+    display: flex;
     position: relative;
-    left: 25%;
-    top: -545px;
-    border-radius: 15px;
-    transition: background-color 0.3s;
-}
-
-.yellow-button-login:hover{
-    background-color: #030300fd;
-    color: white;
-}
- 
-.blue-button-signup{
-    background-color: #ff7057;
-    color: black;
-    font-size: 38px;
-    font-style: bold;
-    font-family: 'Roboto';
-    padding: 5px 25px;
+    gap: 50px;
+    top: -70%;
+    left: 27%;
+  }
+  
+  .button {
+    font-size: 1.8vw;
+    padding: 10px 30px;
+    border-radius: 20px;
     border: none;
-    cursor: pointer;
-    position: relative;
-    left: 39.5%;
-    top: -600px;
-    border-radius: 15px;
-    transition: color 0.3s;
-    z-index: 9999;
-}
-
-.blue-button-signup:hover{
-    color: white;
-    background-color: #030300fd;
-}
-
-.cad-link{
-    color: black;
-    font-size: 38px;
-    font-family: 'Roboto';  
     text-decoration: none;
-}
-.cad-link:hover{
-    color: white;
-}
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .yellow-button {
+    background-color: #f3cf00;
+    color: #333;
+  }
+  
+  .yellow-button:hover {
+    background-color: #030300;
+    color: #fff;
+  }
+  
+  .blue-button {
+    background-color: #ff7057;
+    color: #333;
+  }
+  
+  .blue-button:hover {
+    background-color: #030300;
+    color: #fff;
+  }

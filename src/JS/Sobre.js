@@ -18,7 +18,7 @@ function Sobre() {
                 </div>
                 <div className='containerblack'>
                     <img className='imgmulherubanda' src={require('../assets/Mulher - quem somos.png')}></img>
-                    <img className='flor' src={require('../assets/flor-quem somos.png')}></img>
+                    <img className='flor1' src={require('../assets/flor-quem somos.png')}></img>
                 </div>
                     <div className='lowcontainer'>
                         <h1 className='lowtitulo'>Inspirações</h1>

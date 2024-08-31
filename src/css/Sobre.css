@@ -1,5 +1,6 @@
 .Sobre{
-    height: 1177px;
+    height: 1200px;
+    margin-bottom: 50px;
 }
 
 
@@ -43,9 +44,9 @@
  
 }
 
-.flor {
+.flor1 {
     position: relative;
-    left: -14.7%;
+    transform: translateX(-279px);
 
 }
 

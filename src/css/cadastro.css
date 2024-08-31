@@ -1,58 +1,91 @@
-.titulo-cadastro {
-    position: relative;
-    font-family: 'Roboto';
-    font-size: 28px;
-    text-align: center;
+body {
+    font-family: 'Roboto', sans-serif;
     color: #333;
-    bottom: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 .form-cadastro {
-    position: relative;
-    width: 400px;
-    top: 50px;
+    width: 450px;
     padding: 50px;
-    background-color: transparent;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     margin: 50px auto;
-    margin-bottom: 650px;
+    position: relative;
     z-index: 1;
+    animation: fadeIn 0.7s ease-in-out;
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
+.titulo-cadastro {
+    font-size: 30px;
+    text-align: center;
+    color: #444;
+    margin-bottom: 30px;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .form-item {
-    width: calc(100% - 22px);
-    padding: 10px;
+    width: calc(100% - 20px);
+    padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.form-item:focus {
+    border-color: #74ebd5;
+    box-shadow: 0 0 10px rgba(116, 235, 213, 0.5);
+    outline: none;
 }
 
 .form-submit-cadastro {
-    background-color: #000;
+    width: 100%;
+    padding: 15px;
+    background-color: #74ebd5;
     color: #fff;
     border: none;
-    padding: 12px 20px;
-    font-size: 16px;
     border-radius: 10px;
+    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    position: relative;
-    left: 140px;
+    transition: all 0.3s ease;
 }
 
 .form-submit-cadastro:hover {
-    background-color: #444;
+    background-color: #4db8ba;
 }
 
 .error-message {
     color: #e2031a;
     font-size: 14px;
     margin-top: 10px;
+}
+
+.success-message {
+    color: #28a745;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.password-toggle2{
+    position: absolute;
+    right: 10%;
+    top: 60.6%;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
