@@ -1,70 +1,64 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import '../css/login.css';
-import Imagem from './Imagem';
-import Loja from './Loja';
-import GoLoja from './WindowLoja';
-import { Link } from 'react-router-dom';  
+import { Link, useNavigate } from 'react-router-dom';
 
-class Login extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: '',
-      password: '',
-      errorMessage: ''
-    };
-  }
-  
-  handleInputChange = (event) => {
-    const target = event.target;
-    const name = target.name;
-    const value = target.value;
-    
-    this.setState({
-      [name]: value,
-      errorMessage: ''
-    });
-  }
-  
-  handleSubmit = async (event) => {
-    event.preventDefault();
-    const { username, password } = this.state;
-    
-    if (!this.isValidEmail(username)) {
-      this.setState({ errorMessage: 'Por favor, insira um email válido.' });
-      return;
+const Login = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+
+    if (name === 'username') {
+      setUsername(value);
+    } else if (name === 'password') {
+      setPassword(value);
     }
-    
-    try {
-      
-      this.setState({
-        username: '',
-        password: '',
-        errorMessage: ''
-      });
-      
-    } catch (error) {
-      this.setState({ errorMessage: 'Credenciais inválidas. Por favor, tente novamente.' });
-    }
-  }
-  
-  isValidEmail = (email) => {
+    setErrorMessage('');
+  };
+
+  const isValidEmail = (email) => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
-  }
-  
-  isValidPassword = (password) => {
-    const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
-    return passwordPattern.test(password);
-  }
-  
-  render() {
-    return (
-      
-      <div className='tudoo'>
-        {/* <Imagem /> */}
-        <br />
-      <form onSubmit={this.handleSubmit} className='form-login'>
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (!isValidEmail(username)) {
+      setErrorMessage('Por favor, insira um email válido.');
+      return;
+    }
+
+    try {
+      const response = await axios.post('http://localhost:5000/api/auth/login', {
+        username,
+        password
+      });
+
+      localStorage.setItem('token', response.data.token);
+
+      setUsername('');
+      setPassword('');
+      setErrorMessage('');
+
+      navigate('/Loja');
+    } catch (error) {
+      if (error.response && error.response.data) {
+        setErrorMessage(error.response.data.message);
+      } else {
+        setErrorMessage('Credenciais inválidas. Por favor, tente novamente.');
+      }
+    }
+  };
+
+  return (
+    <div className='tudoo'>
+      <br />
+      <form onSubmit={handleSubmit} className='form-login'>
         <h2 className='form-titulo'>LOGIN</h2>
         <button type="button" className='Botao-Google'>
           <img className='Google-Imagem' src={require('../assets/Google.png')} alt=""/>
@@ -77,9 +71,9 @@ class Login extends React.Component {
           name="username" 
           placeholder="Email" 
           required 
-          value={this.state.username} 
-          onChange={this.handleInputChange}
-          />
+          value={username} 
+          onChange={handleInputChange}
+        />
         <br />
         <input 
           className='form-password'
@@ -88,11 +82,11 @@ class Login extends React.Component {
           name="password" 
           placeholder="Senha" 
           required
-          value={this.state.password} 
-          onChange={this.handleInputChange} 
-          />
+          value={password} 
+          onChange={handleInputChange} 
+        />
         <br />
-        {this.state.errorMessage && <div className="error-message">{this.state.errorMessage}</div>}
+        {errorMessage && <div className="error-message">{errorMessage}</div>}
         <br />
         <a href=''>
             <div className="esqueceu-senha">
@@ -101,12 +95,10 @@ class Login extends React.Component {
         </a>    
         <br />
         <br />
-        <Link to="/Loja"><input className='form-submit' type="submit" /> </Link>
+        <input className='form-submit' type="submit" />
       </form>
-      </div>
-      
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Login;

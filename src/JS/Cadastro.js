@@ -1,4 +1,6 @@
+// frontend/src/components/Cadastro.js
 import React from 'react';
+import axios from 'axios';
 import '../css/cadastro.css';
 
 class Cadastro extends React.Component {
@@ -11,7 +13,8 @@ class Cadastro extends React.Component {
       password: '',
       confirmaPassword: '',
       dataNascimento: '',
-      errorMessage: ''
+      errorMessage: '',
+      successMessage: ''
     };
   }
 
@@ -22,7 +25,8 @@ class Cadastro extends React.Component {
 
     this.setState({
       [name]: value,
-      errorMessage: ''
+      errorMessage: '',
+      successMessage: ''
     });
   }
 
@@ -71,6 +75,13 @@ class Cadastro extends React.Component {
     }
 
     try {
+      const response = await axios.post('http://localhost:5000/api/auth/register', {
+        nome,
+        sobrenome,
+        username,
+        password,
+        dataNascimento
+      });
 
       this.setState({
         nome: '',
@@ -79,11 +90,15 @@ class Cadastro extends React.Component {
         password: '',
         confirmaPassword: '',
         dataNascimento: '',
-        errorMessage: ''
+        errorMessage: '',
+        successMessage: response.data.message
       });
-
     } catch (error) {
-      this.setState({ errorMessage: 'Ocorreu um erro ao processar o cadastro. Por favor, tente novamente.' });
+      if (error.response && error.response.data) {
+        this.setState({ errorMessage: error.response.data.message });
+      } else {
+        this.setState({ errorMessage: 'Erro ao processar o cadastro. Por favor, tente novamente.' });
+      }
     }
   }
 
@@ -160,6 +175,7 @@ class Cadastro extends React.Component {
         />
         <br/>
         {this.state.errorMessage && <div className="error-message">{this.state.errorMessage}</div>}
+        {this.state.successMessage && <div className="success-message">{this.state.successMessage}</div>}
         <br />
         <input className='form-submit-cadastro' type="submit" value="Cadastrar" />
       </form>
