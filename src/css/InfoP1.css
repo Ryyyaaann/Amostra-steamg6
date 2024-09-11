@@ -1,7 +1,8 @@
 .payment-info-container {
     font-family: Arial, sans-serif;
     padding: 20px;
-    max-width: 300px;
+    width: 350px;
+    height: 600px;
     margin: auto;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -84,7 +85,7 @@
   }
 
   .info-p1{
-    background-color: #EFA73C;
+    background-color: #ffffff;
     position: relative;
     left: 130%;
     transform: translateY(-90%);

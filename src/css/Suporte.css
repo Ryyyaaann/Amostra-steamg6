@@ -1,20 +1,28 @@
-.Sobre{
+.Suporte{
     height: 1050px;
     margin-bottom: 50px;
 }
 
 
-.titulo {
+.high-title {
     position: relative;
-    font-family: "Homenaje", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 80px;
-    padding-left: 52px;
-    color: #757882;
+    padding-left: 5%;
+    bottom: 10%;
+    color: #F4A460;
+}
+
+.hr {
+    position: relative;
+    border: 0;
+    border-top: 1px solid black;
+    margin: 50px 0;
 }
 
 .subtitulo {
     position: relative;
-    font-family: "RocknRoll One", sans-serif;
+    font-family: "Open-sans", sans-serif;
     color: #0C0400;
     padding-left: 60px;
     width: 60%;
