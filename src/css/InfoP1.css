@@ -1,11 +1,11 @@
 .payment-info-container {
     font-family: Arial, sans-serif;
     padding: 20px;
-    width: 350px;
-    height: 600px;
-    margin: auto;
+    width: 270px;
+    height: 400px;
+    margin-top: -150px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 15px;
     background-color: transparent;
     
   }
@@ -90,4 +90,19 @@
     left: 130%;
     transform: translateY(-90%);
 
+  }
+  .qtdselect{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .entrega-info{
+    font-size: 14px;
   }

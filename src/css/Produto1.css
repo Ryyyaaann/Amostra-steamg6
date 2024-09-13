@@ -6,10 +6,34 @@
     background-color: #fff;
     position: relative;
     left: 10%;
-    bottom: 65%;
-
+    bottom: 85%;
 }
-  
+
+.product-thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: -1;
+  left: -870px;
+}
+
+.thumbnail {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  position: relative;
+  top: 350px;
+}
+
+.thumbnail img {
+  width: 40px;
+  height: auto;
+}
+.produto-name{
+  opacity: 85%;
+}
 .product-header {
     display: flex;
     justify-content: space-between;
@@ -38,7 +62,8 @@
   }
   
   .discounted-price {
-    color: red;
+    color: rgb(0, 0, 0);
+    opacity: 80%;
     font-weight: bold;
     font-size: 26px;
   }
@@ -108,7 +133,7 @@
     right: 190%;
     max-height: 610px;
     max-width: 610px;
-    transform: translateY(100%);
+    transform: translateY(140%);
   }
 
   .produto{

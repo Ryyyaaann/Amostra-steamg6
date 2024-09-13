@@ -1,19 +1,26 @@
 import React from 'react';
 import '../css/Produto1.css';
 import InfoP1 from '../JS/InfoP1';
+import imgtemp from '../assets/imgtemp.png';
 
 function Produto1() {
+    const thumbnails = [imgtemp, imgtemp, imgtemp];
   return (
     <div className="produto">
         <div className="product-container">
         <img src={require('../assets/imgtemp.png')} alt='' className='Img-principal'/>
+        <div className="product-thumbnails">
+          {thumbnails.map((thumbnail, index) => (
+            <img key={index} src={thumbnail} alt={`Imagem ${index + 1}`} className='thumbnail' />
+          ))}
+        </div>
         <div className="product-main-container"> 
             <div className='infoproduto'>
                 <div className="product-header">
                     <span>Novo | +1000 vendidos</span>
                     <span className="favorite-icon">❤️</span>
                 </div>
-                <h1>Jardim da Eternidade: Florescendo em Grandeza</h1>
+                <h1 className='produto-name'>Jardim da Eternidade: Florescendo em Grandeza</h1>
                 <div className="rating">
                     ⭐⭐⭐⭐☆ (60)
                 </div>
