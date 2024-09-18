@@ -24,9 +24,7 @@ function Navbar() {
         <li className="nav-item">
           <Link to="/Perfil" className="nav-link">Perfil</Link>
         </li>
-        <li className="nav-item">
-          <Link to="/ProdTemp" className="nav-link">pagina individuais</Link>
-        </li>
+        
       </ul>
     </nav>
   );

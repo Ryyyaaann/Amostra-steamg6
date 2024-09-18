@@ -1,12 +1,12 @@
 .navbar {
-    background-color: orange;
+    background-color: #F59CAE;
     display: flex;
     align-items: center;
     height: 60px;
     padding: 0 20px;
     position: relative;
     z-index: 2;
-    margin-bottom: 205px;
+    margin-bottom: 20 px;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
     
   }
@@ -20,11 +20,11 @@
   }
   
   .nav-item {
-    margin-right: 30px;
-    font-size: 25px;
+    margin-right: px;
+    font-size: 22px;
     position: relative;
     font-style: bold;
-    left: 930px;
+    left: 90px;
   }
   
   .nav-link {
