@@ -1,5 +1,6 @@
 .Home{
     height: 962px;
+    overflow: hidden;
 }
 .decor-ball{
   border-radius: 100%;
@@ -15,26 +16,34 @@
 }
 
 .Imagem{
-    position: relative;
-    top: -10%;
-    left: 50%;
+    position: absolute;
+    top: 15%;
+    left: 48%;
+    margin: 0;
+    padding: 0;
     display: block;
-    margin: 0 auto;
   } 
-
+.Imagem2{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    display: block;
+    top: 5%;
+}
   .textinho{
     position: relative;
     align-items: center;
     justify-content: center;
-    font-size: 45px;
-    max-width: 550px;
+    font-size: 65px;
+    max-width: 700px;
     left: 10%;
-    top: -55%;
+    top: 18%;
     font-family: 'Roboto';
     line-height: 1;
-    
   }
-
+p{
+  font-weight: 300;
+}
   .button-section {
     display: flex;
     position: relative;
@@ -45,14 +54,16 @@
   
   .button {
     font-size: 1.8vw;
-    padding: 10px 30px;
+    position: relative;
+    top: 270px;
+    right: 18%;
+    padding: 18px 60px;
     border-radius: 50px;
     border: none;
     text-decoration: none;
     color: black;
     cursor: pointer;
     transition: all 0.3s ease;
-    display: inline-block;
   }
   
   .yellow-button {
@@ -80,4 +91,8 @@
   .blue-button:hover {
     background-color: #030300;
     color: #fff;
+  }
+  .perfil{
+    position: relative;
+    right: -1750%;
   }

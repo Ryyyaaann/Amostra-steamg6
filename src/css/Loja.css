@@ -25,6 +25,7 @@
     float: right;
     transform: rotate(180deg);
     cursor: pointer;
+    background-color: black;
 }
 
 .setinha1 {
@@ -49,7 +50,7 @@
     position: relative;
     left: 165px;
     top: 20px;
-
+    border-radius: 20px;
 }
 
 .titulos1, .titulos2, .titulos3 {
@@ -66,10 +67,9 @@
 .imagem2 {
     background-color: white;
     padding: 15px 15px 60px 15px;
-
+    border-radius: 20px;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
-
 .sub-titulos1 {
     display: flex;
     flex-direction: row;

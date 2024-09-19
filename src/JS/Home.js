@@ -5,15 +5,8 @@ import {Link} from 'react-router-dom'
 function Home(){
     return(
             <div className="Home">
-            <div claName="">
-                <div className='decor-ball3'></div>
-                <div className='decor-ball2'></div>
-                <div className='decor-ball'>
-            </div>
-
-            </div>
-                    <img src={require('../assets/imgfundo1.png')} alt='fundo1' width={500}/>
-                    <img src={require('../assets/fthome.png')} className='Imagem' alt="mulher" width={680}/>
+                    <img src={require('../assets/imgfundo1.png')} className='Imagem2' alt='fundo1' width={600}/>
+                    <img src={require('../assets/fthome.png')} className='Imagem' alt="mulher" width={950}/>
             
                 <div className="textinho">
                     <p >Seu espaço para explorar, criar e compartilhar - Woman Space.</p> 

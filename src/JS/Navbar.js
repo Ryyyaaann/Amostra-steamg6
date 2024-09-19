@@ -22,7 +22,7 @@ function Navbar() {
           <Link to="/Comunidade" className="nav-link">Comunidade</Link>
         </li>
         <li className="nav-item">
-          <Link to="/Perfil" className="nav-link">Perfil</Link>
+          <Link to="/Perfil" className="nav-link perfil">Perfil</Link>
         </li>
         
       </ul>
