@@ -5,7 +5,7 @@ function Comunidade() {
     return (
         <div className='comunidade'>
             <div className='color-title'>
-                <h1 className='titulo-page'>Comunidade</h1>
+                <h1 className='titulo-page'>Comunidade</h1> 
             </div>
         </div>
     )

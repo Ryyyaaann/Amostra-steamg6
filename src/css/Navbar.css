@@ -20,11 +20,11 @@
   }
   
   .nav-item {
-    margin-right: px;
     font-size: 22px;
     position: relative;
     font-style: bold;
     left: 90px;
+    top: 5px;
   }
   
   .nav-link {
@@ -34,8 +34,54 @@
     border-radius: 30px;
     transition: 0.1s;
   }
+
+  .nav-link-perfil {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 30px;
+    transition: 0.1s;
+    position: relative;
+    left: 1715%;
+  }
+
+  .nav-link-icon {
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.1s;
+    position: relative;
+    left: 1190px;
+    
+  }
+
+  .nav-link-carrinho {
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.1s;
+    position: relative;
+    left: 1160px;
+    
+  }
   
+  .circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #E03131;
+    border-radius: 50%;
+    z-index: -1;
+    right: -6px;
+    top: -20px;
+  }
+
   .nav-link:hover {
-    background-color: #141414;
+    text-decoration: underline;
+    color: #fff;
+  }
+
+  .nav-link-perfil:hover {
+    text-decoration: underline;
     color: #fff;
   }

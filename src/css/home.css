@@ -67,16 +67,16 @@ p{
   }
   
   .yellow-button {
-    /* cor do fundo com gradiente */
     background: linear-gradient(to right, #FFAFBF, #F86783);
     color: #fff;
     width: 100px;
     text-align: center;
     font-size: 26px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
   }
   
   .yellow-button:hover {
-    background-color: #030300;
+    transform: translateY(-5px);
     color: #fff;
   }
   
@@ -86,10 +86,11 @@ p{
     width: 100px;
     text-align: center;
     font-size: 26px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
   }
   
   .blue-button:hover {
-    background-color: #030300;
+    transform: translateY(-5px);
     color: #fff;
   }
   .perfil{
