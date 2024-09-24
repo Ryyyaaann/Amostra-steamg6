@@ -25,7 +25,7 @@ function Sobre() {
                         <h1>Nosso Suporte</h1>
                         <p>Entre em qualuqer caso de problema no site, transaferencia, verificação de perfil dentre ademais dificuldade que se encontra. Através de nosso e-mail e número para contato.</p>
                         <br></br>
-                        <span>ajskdsasj@gmail.com</span>
+                        <span>WomenSpace@exemplo.com</span>
                         <br></br>
                         <br></br>
                         <span>(71) 9568-1234</span>

@@ -42,7 +42,7 @@
     border-radius: 30px;
     transition: 0.1s;
     position: relative;
-    left: 1715%;
+    left: 1695%;
   }
 
   .nav-link-icon {
@@ -85,3 +85,24 @@
     text-decoration: underline;
     color: #fff;
   }
+
+/* Estilo do botão de alternar o Dark Mode */
+.dark-mode-toggle {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  left: 1000px;
+  color: white;
+}
+
+.dark-mode-toggle svg {
+  width: 30px;
+  height: 30px;
+  fill: #ffffff;
+}
+
+.dark-mode-toggle:hover svg {
+  fill: #cbb4e6; /* Cor ao passar o mouse */
+}
