@@ -1,8 +1,56 @@
 .loja {
-    height: 1177px;
+    height: auto;
+    background-color: #FFF8FC;
 }
 
-
+.exposicoes-imagem{
+    position: absolute;
+    top: -5%;
+    left: 28%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.grupo5-imagem{
+    position: absolute;
+    top: 18%;
+    left: 60%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.grupo4-imagem{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.grupo3-imagem{
+    position: absolute;
+    top: -7%;
+    left: 60%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.grupo2-imagem{
+    position: absolute;
+    top: 6.5%;
+    left: 25%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.grupo1-imagem{
+    position: absolute;
+    top: -5%;
+    left: 4%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
 .color-title {
     text-align: center;
     padding: 5px 10px 5px 10px;
@@ -16,30 +64,22 @@
 .titulo-page {  
     font-family: "verdana";
     position: relative;
-    bottom: 25px;
-    font-size: 50px;
+    text-align: center;
+    /* left: 42%; */
+    top: -30px;
+    font-size: 55px;
     font-weight: 500;
-}
-
-.setinha2 {
-    float: right;
-    transform: rotate(180deg);
-    cursor: pointer;
-    background-color: black;
-}
-
-.setinha1 {
-    cursor: pointer;
+    color: rgb(255, 255, 255);
 }
 
 .Pedro {
-    max-width: 70%;
+    max-width: 80%;
     margin: 0 auto;
     font-family: "Work Sans", sans-serif;
     white-space: nowrap ;
     height: 900px;
     position: relative;
-    bottom: 130px;
+    bottom: -4%;
     
 }
 
@@ -152,4 +192,46 @@
 
 .sub-titulos2, .sub-titulos3 {
     gap: 90px;
+}   
+    
+.product-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+gap: 2rem;
+justify-content: center;
+grid-template-columns: repeat(5, 1fr);
+
+}
+.product-card {
+background-color: white;
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.product-image {
+width: 230px;
+height: 270px;
+background-color: #f0f0f0;
+margin-bottom: -8px;
+border-radius: 15px;
+box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.1);
+
+}
+.product-name {
+font-size: 1.2rem;
+margin-bottom: -8px;
+}
+.product-description {
+font-size: 0.9rem;
+color: #666;
+margin-bottom: -8px;
+max-width: 150px;
+}
+.product-price {
+font-size: 1rem;
+font-weight: bold;
+margin-bottom: -5px;
 }

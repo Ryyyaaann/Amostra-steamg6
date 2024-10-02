@@ -7,70 +7,100 @@ import { Link } from'react-router-dom';
 function Loja() {
     return (
         <div className='loja'>
-            <div className='color-title'>
-                <p className='titulo-page'>Painel de Exposições</p>
-            </div>
+        <div>
+            <img src={require('../assets/grupo2.png')} className='grupo3-imagem' alt="nome" />
+            <img src={require('../assets/Grupo1.png')} className='grupo1-imagem' alt="nome" />
+            <img src={require('../assets/Exposicoes.png')} className='exposicoes-imagem' alt="nome" width={800}/>
+            <img src={require('../assets/grupo3.png')} className='grupo2-imagem' alt="nome" />
+            <img src={require('../assets/grupo4.png')} className='grupo4-imagem' alt="nome" />
+            <img src={require('../assets/grupo5.png')} className='grupo5-imagem' alt="nome" />
+                <p className='titulo-page'>Exposições</p>
+        </div>
+      
             <div className='Pedro'>
-                <Setinha className="setinha1"/>
-                <Setinha className="setinha2"/>
-                <div className='container1'>
-                    <div className="imgcontainer1">
-                        <img className="imagem2" src={require('../assets/imagem1.png')} alt='' width={184.06} height={176.27}/>                        
-                        <Link to='/Produto1'>
-                            <img className='imagem2' src={require('../assets/imagem2.png')} alt='' width={184.06} height={176.27}/>
-                        </Link>
-                        <img className='imagem2' src={require('../assets/imagem3.png')} alt='' width={184.06} height={176.27}/>
-                        <img className='imagem2' src={require('../assets/imagem 23.png')} alt='' width={184.06} height={176.27}/>
+           
+            {/* <div className="product-item">
+                <h2>Arte mulher</h2>
+                <p>Descrição basica</p>
+                <p>Preço: R$</p>
+            </div> */}
+            <main className="main">
+        
+                <div className="product-grid">
+                    
+                    <div  className="product-card">
+                        <div className="product-image" />
+                        <h2 className="product-name">nome</h2>
+                        <p className="product-description">descrição</p>
+                        <p className="product-price">R$30,00</p>
                     </div>
-                    <div className='titulos1'>
-                        <p className='titulo1'></p>
-                        <p className='titulo1'></p>
-                        <p className='titulo1-1'></p>
+
+                    <div  className="product-card">
+                        <div className="product-image" />
+                        <h2 className="product-name">nome</h2>
+                        <p className="product-description">descrição</p>
+                        <p className="product-price">R$30,00</p>
                     </div>
-                    <div className='sub-titulos1'>
-                        <p className='sub-titulo1'></p>
-                        <p className='sub-titulo1'> </p>
-                        <p className='sub-titulo1-1'> </p>
+                    <div  className="product-card">
+                        <div className="product-image" />
+                        <h2 className="product-name">nome</h2>
+                        <p className="product-description">descrição</p>
+                        <p className="product-price">R$30,00</p>
                     </div>
+
+                    <div  className="product-card">
+                        <div className="product-image" />
+                        <h2 className="product-name">nome</h2>
+                        <p className="product-description">descrição</p>
+                        <p className="product-price">R$30,00</p>
+                    </div>
+
+                    <div  className="product-card">
+                        <div className="product-image" />
+                        <h2 className="product-name">nome</h2>
+                        <p className="product-description">descrição</p>
+                        <p className="product-price">R$30,00</p>
+                    </div>
+
+                    <div  className="product-card">
+                        <div className="product-image" />
+                        <h2 className="product-name">nome</h2>
+                        <p className="product-description">descrição</p>
+                        <p className="product-price">R$30,00</p>
+                    </div>
+
+                    <div  className="product-card">
+                        <div className="product-image" />
+                        <h2 className="product-name">nome</h2>
+                        <p className="product-description">descrição</p>
+                        <p className="product-price">R$30,00</p>
+                    </div>
+
+                    <div  className="product-card">
+                        <div className="product-image" />
+                        <h2 className="product-name">nome</h2>
+                        <p className="product-description">descrição</p>
+                        <p className="product-price">R$30,00</p>
+                    </div>
+
+                    <div  className="product-card">
+                        <div className="product-image" />
+                        <h2 className="product-name">nome</h2>
+                        <p className="product-description">descrição</p>
+                        <p className="product-price">R$30,00</p>
+                    </div>
+
+                    <div  className="product-card">
+                        <div className="product-image" />
+                        <h2 className="product-name">nome</h2>
+                        <p className="product-description">descrição</p>
+                        <p className="product-price">R$30,00</p>
+                    </div>
+            
                 </div>
-                <div className='container2'>
-                <div className="imgcontainer2">
-                    <img className='imagem2' src={require('../assets/imagem4.png')} alt='' width={184.06} height={176.27}/>
-                    <img className='imagem2' src={require('../assets/imagem5.png')} alt='' width={184.06} height={176.27}/>
-                    <img className='imagem2' src={require('../assets/imagem6.png')} alt='' width={184.06} height={176.27}/>
-                    <img className='imagem2' src={require('../assets/imagem 12.png')} alt='' width={184.06} height={176.27}/>
-                    </div>
-                    <div className='titulos2'>
-                    <p className='titulo2'></p>
-                    <p className='titulo2-1'></p>
-                    <p className='titulo2-2'></p>
-                    </div>
-                    <div className='sub-titulos2'>
-                        <p className='sub-titulo2'></p>
-                        <p className='sub-titulo2-1'></p>
-                        <p className='sub-titulo2'></p>
-                    </div>
-                </div>
-                <div className='container3'>
-                <div className="imgcontainer3">
-                    <img className='imagem2' src={require('../assets/image 7.png')} alt='' width={184.06} height={176.27}/>
-                    <img className='imagem2' src={require('../assets/image 8.png')} alt='' width={184.06} height={176.27}/>
-                    <img className="imagem2" src={require('../assets/image 9.png')} alt='' width={184.06} height={176.27}/>
-                    <img className="imagem2" src={require('../assets/imagem 11.png')} alt='' width={184.06} height={176.27}/>
-                </div>
-                
-                <div className='titulos3'>
-                    <p className='titulo3'></p>
-                    <p className='titulo3'></p>
-                    <p className='titulo3-1'></p>
-                </div>
-                </div>
-                    <div className='sub-titulos3'>
-                        <p className='sub-titulo3'></p>
-                        <p className='sub-titulo3'></p>
-                        <p className='sub-titulo3-1'></p>
-                    </div>
-            </div>
+        </main>
+            
+        </div>
         </div>
     )
 }
