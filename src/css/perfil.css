@@ -1,13 +1,300 @@
-.perfil {
-    height: 1000px;
+.profile {
+    height: 1600px;
 }
 
-.container-upper {
-   position: relative;
-   bottom: 205px;
+.upper-container {
+    background: rgb(228,161,255);
+    background: linear-gradient(180deg, rgba(228,161,255,1) 0%, rgba(142,7,117,1) 100%);
+    height: 25%;
 }
 
-.fundo-upper {
-    width: 1000px;
-    max-height: auto;
+.profile-pic {
+    position: relative;
+    left: 23%;
+    top: 30%;
+}
+
+
+.user-tag {
+    color: #6A6A6A;
+    font-size: 20px;
+    margin-top: -17%;
+    position: relative;
+    left: 17%;
+}
+
+.user-name {
+    position: relative;
+    color: #000000;
+    font-size: 27px;
+    left: 10%;
+}
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    font-family: "Inknut Antiqua", serif;
+    position: relative;
+    top: 5%;
+    left: 1.1%;
+}
+
+.follow {
+    background: linear-gradient(180deg, #e4a1ff 0%, #8e0775 100%);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-family: "Inknut Antiqua", serif;
+    font-size: 18px;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    transition: background 0.4s, box-shadow 0.4s, transform 0.4s; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    width: 100%;
+    margin: 0; 
+    position: relative;
+    margin-top: -7%;
+}
+
+.follow:hover {
+    background: linear-gradient(180deg, #f0b3ff 0%, #a90891 100%);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.follow:focus {
+    background: linear-gradient(180deg, #d09fff 0%, #a3067d 100%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+    outline: none;
+}
+
+.edit-profile {
+    position: relative;
+    right: 12%;
+    margin-top: -8.4%;
+    color: #8B8092;
+}
+
+.pencil-button {
+    background: none;
+    border: none; 
+    padding: 0; 
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    bottom: 73px;
+    text-align: right;
+}
+.pencil-img{
+    position: relative;
+    top: 55px;
+    left: 60%;
+}
+.edit-text {
+    position: relative;
+    left: 65%;
+    bottom: -35px;
+    font-size: 25px;
+}
+
+.user-info {
+    position: relative;
+    left: 1.5%;
+}
+
+.sino {
+    position: relative;
+    left: 121%;
+    bottom: 60px;
+    background: none;
+    border: none; 
+    padding: 0; 
+    cursor: pointer;
+    outline: none;
+}
+
+.lower-container {
+    position: relative;
+    left: 2.3%;
+}
+
+
+.linha-vertical {
+    width: 4px; /* Espessura da linha */
+    height: 85px; /* Altura da linha */
+    background-color: #CC8F9A; /* Cor da linha (substitua pelo código de cor desejado) */
+    position: relative;
+    left: 46%;
+}
+
+
+.linha-horizontal-midia {
+    height: 4px; /* Espessura da linha */
+    width: 100px; /* Largura da linha */
+    background-color: #CC8F9A; /* Cor da linha (substitua pelo código de cor desejado) */
+    position: relative;
+    bottom: 43px;
+    right: 4%;    
+  }
+  
+.linha-horizontal-biografia {
+    height: 4px; /* Espessura da linha */
+    width: 160px; /* Largura da linha */
+    background-color: #CC8F9A; /* Cor da linha (substitua pelo código de cor desejado) */
+    position: relative;
+    bottom: 43px;
+    left: 71.5%;    
+}
+
+.linha-horizontal {
+    height: 4px; /* Espessura da linha */
+    width: 900px; /* Largura da linha */
+    background-color: #CC8F9A; /* Cor da linha (substitua pelo código de cor desejado) */
+    position: relative;
+    bottom: 25px;
+    left: 1.6%;    
+}
+
+.mid-bio {
+    display: flex;
+    gap: 290px;
+    position: relative;
+    bottom: 90px;
+}
+
+.midia, .biografia {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    z-index: 999;
+    gap: 50px;
+    position: relative;
+    margin-top: 3.2%;
+}
+.biography-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    z-index: 999;
+    gap: 50px;
+    position: relative;
+    margin-top: 3.2%;   
+}
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 5%;
+}
+.product-card2{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 5%;
+    margin-left: 10px;
+}
+.product-image {
+    width: 230px;
+    height: 270px;
+    background-color: #f0f0f0;
+    margin-bottom: -8px;
+    border-radius: 15px;
+    box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+.product-name {
+    font-size: 1.2rem;
+    margin-bottom: -8px;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: -8px;
+    max-width: 150px;
+}
+
+.product-price {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: -5px;
+}
+.product-image2 {
+    width: 500px;
+    height: 300px;
+    
+    margin-bottom: -8px;
+    border-radius: 15px;
+
+}
+.Biografy-card2{
+    position: relative;
+    width: 550px;
+    height: 500px;
+    background-color: white;
+    top: 20px;
+    border-radius: 15px;
+    box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.1);
+}
+.biografia-h2{
+    position: relative;
+    font-size: 25px;
+    font-weight: 100;
+    max-width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 5%;
+    top: -170px;
+}
+.biografia-name{
+    position: relative;
+    font-size: 25px;
+    font-weight: 100;
+    max-width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 39%;
+    bottom: 250px;
+}
+.low-images2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 670px;
+    z-index: 999;
+
+}
+
+.left-flower {
+    position: relative;
+    left: 0%;
+}
+
+.right-flower {
+    position: relative;
+    left: 25%;
+    bottom: -550.7px;
 }
