@@ -1,3 +1,145 @@
 .comunidade {
-    height: 400px;
+    height: 1300px;
+    background-color: #FFF8FC;
 }
+.color-title {
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+    position: relative;
+    bottom: 160px;
+    width: 1200px;
+    left: 18%;
+    height: 60px;
+}
+.exposicoes-imagem{
+    position: absolute;
+    top: -5%;
+    left: 28%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.grupo5-imagem{
+    position: absolute;
+    top: 18%;
+    left: 60%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.grupo4-imagem{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.grupo3-imagem{
+    position: absolute;
+    top: -7%;
+    left: 60%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.grupo2-imagem{
+    position: absolute;
+    top: 6.5%;
+    left: 25%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.grupo1-imagem{
+    position: absolute;
+    top: -5%;
+    left: 4%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+/* .container {
+    font-family: Arial, sans-serif;
+  }
+  .header {
+    background-color: #FF69B4;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-weight: bold;
+    font-size: 24px;
+    margin-right: 20px;
+  }
+  .nav-item {
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+  }
+  .user-actions {
+    display: flex;
+    gap: 10px;
+  }
+  .icon-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  .main {
+    padding: 20px;
+    background-size: cover;
+    min-height: 100vh;
+  }
+  .title {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .community-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .community-card {
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-title {
+    font-weight: bold;
+  }
+  .member-count {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .pagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .page-link {
+    margin: 0 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+  }
+  .orange { background-color: #FFA500; }
+  .red { background-color: #FF6347; }
+  .blue { background-color: #4682B4; }
+  .purple { background-color: #483D8B; }
+  .pink { background-color: #DDA0DD; }
+  .brown { background-color: #F4A460; }
+
+  */

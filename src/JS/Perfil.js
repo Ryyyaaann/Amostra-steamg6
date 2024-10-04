@@ -28,21 +28,20 @@ function Perfil() {
                 <p className="biografia-h2">Sou Ana Beatriz, uma artista multifacetada, apaixonada por Web Design, Ilustrações 2D e Modelagem 3D. Nascida em Salvador, 
                     Bahia. Além disso, a confecção de artes digitais é meu hobby, uma expressão livre da minha criatividade. Estou entusiasmada em ingressar em uma plataforma que apoia
                      e celebra artistas mulheres, proporcionando um espaço exclusivo para nossa expressão artística.</p>
-                <p className="product-price2">R$00,00</p>
+            </div>
+            <div className="Biografy-card3">
+                <div className="product-image2" />
+                <h2 className="titulo-estilo">Meu Estilo</h2>
+                <h2 className="tipos-estilo">Web design e Ilustrações 2D.</h2>
+                <h2 className="tipos-estilo">Edição e Modelagem 3D.</h2>
+                <h2 className="tipos-estilo">Fotografias</h2>
+                <img src={require('../assets/bioper.png')} className='bioprofile-pic' alt='Foto de Perfil' />
+           
             </div>
             <div className="Biografy-card2">
-                <div className="product-image2" />
-                <h2 className="product-name2">nome</h2>
-                <p className="product-description2">descrição</p>
-                <p className="product-price2">R$00,00</p>
+                <p className='titulo-canais'>Comunidades - Canais</p>
+               
             </div>
-            <div className="Biografy-card2">
-                <div className="product-image2" />
-                <h2 className="product-name2">nome</h2>
-                <p className="product-description2">descrição</p>
-                <p className="product-price2">R$00,00</p>
-            </div>
-          
         </div>
       );
     }
