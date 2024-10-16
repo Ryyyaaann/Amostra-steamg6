@@ -141,6 +141,7 @@ class Cadastro extends React.Component {
         <div className='realizecadastro'>
           <h2 className='titulo-cadastro'>REALIZE O SEU CADASTRO!</h2>
         </div>
+        <label for="nome">Nome:</label>
         <input 
           type="text" 
           id="nome" 

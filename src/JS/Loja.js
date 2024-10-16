@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import '../css/Loja.css';
 import { ReactComponent as Setinha } from '../assets/setinha.svg';
 import { Link } from'react-router-dom';
 
 
-function Loja() {
+const Loja = () => {
+    const [produtos, setProdutos] = useState([])
+
+    useEffect(() => {
+        const fetchProdutos = async () => {
+            try{
+                const response = await axios.get('http://localhost:5000/api/produtos/loja');
+                setProdutos(response.data);
+            }catch (error){
+                console.error('Erro ao buscar', error);
+            }
+        }
+
+        fetchProdutos();
+    }, [])
     return (
         <div className='loja'>
         <div>
@@ -25,83 +40,20 @@ function Loja() {
                 <p>Preço: R$</p>
             </div> */}
             <main className="main">
-        
-                <div className="product-grid">
-                    
-                    <div  className="product-card">
-                        <div className="product-image" />
-                        <h2 className="product-name">nome</h2>
-                        <p className="product-description">descrição</p>
-                        <p className="product-price">R$30,00</p>
-                    </div>
-
-                    <div  className="product-card">
-                        <div className="product-image" />
-                        <h2 className="product-name">nome</h2>
-                        <p className="product-description">descrição</p>
-                        <p className="product-price">R$30,00</p>
-                    </div>
-                    <div  className="product-card">
-                        <div className="product-image" />
-                        <h2 className="product-name">nome</h2>
-                        <p className="product-description">descrição</p>
-                        <p className="product-price">R$30,00</p>
-                    </div>
-
-                    <div  className="product-card">
-                        <div className="product-image" />
-                        <h2 className="product-name">nome</h2>
-                        <p className="product-description">descrição</p>
-                        <p className="product-price">R$30,00</p>
-                    </div>
-
-                    <div  className="product-card">
-                        <div className="product-image" />
-                        <h2 className="product-name">nome</h2>
-                        <p className="product-description">descrição</p>
-                        <p className="product-price">R$30,00</p>
-                    </div>
-
-                    <div  className="product-card">
-                        <div className="product-image" />
-                        <h2 className="product-name">nome</h2>
-                        <p className="product-description">descrição</p>
-                        <p className="product-price">R$30,00</p>
-                    </div>
-
-                    <div  className="product-card">
-                        <div className="product-image" />
-                        <h2 className="product-name">nome</h2>
-                        <p className="product-description">descrição</p>
-                        <p className="product-price">R$30,00</p>
-                    </div>
-
-                    <div  className="product-card">
-                        <div className="product-image" />
-                        <h2 className="product-name">nome</h2>
-                        <p className="product-description">descrição</p>
-                        <p className="product-price">R$30,00</p>
-                    </div>
-
-                    <div  className="product-card">
-                        <div className="product-image" />
-                        <h2 className="product-name">nome</h2>
-                        <p className="product-description">descrição</p>
-                        <p className="product-price">R$30,00</p>
-                    </div>
-
-                    <div  className="product-card">
-                        <div className="product-image" />
-                        <h2 className="product-name">nome</h2>
-                        <p className="product-description">descrição</p>
-                        <p className="product-price">R$30,00</p>
-                    </div>
-            
-                </div>
         </main>
-            
+        <div className="produtos-lista">
+                {produtos.map(produto => (
+                    <div key={produto.id} className="produto-card">
+                        <h2>{produto.nome}</h2>
+                        <p>Preço: R$ {produto.preco}</p>
+                        <p>Autor: {produto.autor}</p>
+                        <p>{produto.descricao}</p>
+                        <p>Quantidade disponível: {produto.quantidade}</p>
+                    </div>
+                ))}
+            </div>
         </div>
-        </div>
+    </div>
     )
 }
 

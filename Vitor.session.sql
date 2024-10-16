@@ -18,10 +18,8 @@ create table produtos(
     nome varchar(255) not null,
     preco decimal(10, 2) not null,
     quantidade int not null,
-    autor varchar(255) not null,
-    descricao text
+    descricao text,
+    id_user int not null,
+
+    foreign key (id_user) references usuarios(id_user)
 )
-
-drop table produtos
-
-select * from produtos

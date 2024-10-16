@@ -66,31 +66,28 @@ const Login = () => {
 
   return (
     <div className="tudoo">
+        <img src={require('../assets/Group 43.png')} className='fundo-login' alt="fundo-geometrico" width={950}/>
+        <h2 className="form-titulo">Faça seu login</h2>
       <form onSubmit={handleSubmit} className="form-login">
-        <h2 className="form-titulo">LOGIN</h2>
-        <button type="button" className="Botao-Google">
-          <img className="Google-Imagem" src={require('../assets/Google.png')} alt="Google" />
-          Continue com o Google
-        </button>
         <div className="input-group">
-          <FaEnvelope className="input-icon" />
+          <h4 className="input-title">Email</h4>
           <input
             className="form-username"
             type="text"
             name="username"
-            placeholder="Email"
+            placeholder="Insira seu e-mail..."
             required
             value={username}
             onChange={handleInputChange}
           />
         </div>
         <div className="input-group">
-          <FaLock className="input-icon" />
+          <h4 className="input-title">Senha</h4>
           <input
             className="form-password"
             type={showPassword ? "text" : "password"}
             name="password"
-            placeholder="Senha"
+            placeholder="Insira sua senha..."
             required
             value={password}
             onChange={handleInputChange}
@@ -101,14 +98,7 @@ const Login = () => {
         </div>
         {errorMessage && <div className="error-message">{errorMessage}</div>}
         <div className="extras">
-          <label className="lembre-me">
-            <input
-              type="checkbox"
-              name="rememberMe"
-              checked={rememberMe}
-              onChange={handleCheckboxChange}
-            /> Lembre-me
-          </label>
+      
           <Link to="/esqueceu-senha" className="esqueceu-senha">Esqueceu sua senha?</Link>
         </div>
         <input className="form-submit" type="submit" value={loading ? "Carregando..." : "Entrar"} disabled={loading} />
