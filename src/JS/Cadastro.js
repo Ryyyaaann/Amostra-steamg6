@@ -146,7 +146,7 @@ class Cadastro extends React.Component {
           type="text" 
           id="nome" 
           name="nome" 
-          placeholder="Nome" 
+          placeholder="Insira seu nome" 
           required 
           value={this.state.nome} 
           onChange={this.handleInputChange}
@@ -155,11 +155,12 @@ class Cadastro extends React.Component {
         />
         {validationErrors.nome && <div className="error-message">{validationErrors.nome}</div>}
         <br />
+        <label for="nome">Apelido:</label>
         <input 
           type="text" 
           id="sobrenome" 
           name="sobrenome" 
-          placeholder="Sobrenome" 
+          placeholder="Insira seu apelido, será assim que irão te ver no site..." 
           required 
           value={this.state.sobrenome} 
           onChange={this.handleInputChange}

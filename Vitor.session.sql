@@ -23,3 +23,6 @@ create table produtos(
 
     foreign key (id_user) references usuarios(id_user)
 )
+
+
+select * from produtos;

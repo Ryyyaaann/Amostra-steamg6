@@ -51,6 +51,7 @@ const Loja = () => {
                         <p>Quantidade disponível: {produto.quantidade}</p>
                     </div>
                 ))}
+               
             </div>
         </div>
     </div>
