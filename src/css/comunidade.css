@@ -59,6 +59,14 @@
     padding: 0;
     display: block;
 }
+
+input::placeholder {
+  font-family: 'Homenajage', sans-serif; /* Escolha a fonte */
+  font-size: 14px; /* Tamanho da fonte */
+  color: #B2B2B2; /* Cor do placeholder */
+  font-style: italic; /* Estilo da fonte, opcional */
+}
+
 /* .container {
     font-family: Arial, sans-serif;
   }

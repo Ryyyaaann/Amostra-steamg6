@@ -1,0 +1,24 @@
+.loja {
+    height: 1500px;
+    background-color: #FFF8FC;
+}
+
+.Pedro {
+    max-width: 80%;
+    margin: 0 auto;
+    font-family: "Work Sans", sans-serif;
+    white-space: nowrap ;
+    height: 900px;
+    position: relative;
+    bottom: -4%;
+    
+}
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }

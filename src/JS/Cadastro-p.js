@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import '../css/cp0.css'
 
 class CP0 extends React.Component {
     constructor(props) {
@@ -47,8 +48,11 @@ class CP0 extends React.Component {
 
         return (
             <div className="Cadastro-P">
-                <main className="CP-Main">
+                <section className="secao">
                     <h1>Cadastro produto</h1>
+                </section>
+                <img src={require('../assets/fundinho-cp0.png')} alt="fundinho" className="CP-imagem" />
+                <main className="CP-Main">
                     <form onSubmit={this.handleSubmit} >
                         <label>Nome do produto:</label>
                         <input
@@ -58,6 +62,7 @@ class CP0 extends React.Component {
                             type="text"
                             placeholder="Nome do produto"
                             onChange={this.handleInputChange}
+                            className="CP-input"
                             required
                         />
                         <label>Preço do produto:</label>
@@ -67,6 +72,7 @@ class CP0 extends React.Component {
                             value={preco}
                             placeholder="Preço do produto"
                             onChange={this.handleInputChange}
+                            className="CP-input"
                             required
                         />
                         <label>Quantidade do produto:</label>
@@ -76,6 +82,7 @@ class CP0 extends React.Component {
                             value={quantidade}
                             placeholder="Quantidade do produto"
                             onChange={this.handleInputChange}
+                            className="CP-input"
                             required
                         />
                         <label>Autor do produto:</label>
@@ -85,6 +92,7 @@ class CP0 extends React.Component {
                             value={autor}
                             placeholder="Autor do produto"
                             onChange={this.handleInputChange}
+                            className="CP-input"
                             required
                         />
                         <label>Descrição do produto:</label>
@@ -93,9 +101,10 @@ class CP0 extends React.Component {
                             placeholder="Descrição do produto"
                             value={descricao}
                             onChange={this.handleInputChange}
+                            className="CP-input"
                             required
                         />
-                        <input type="submit" value="Cadastrar" />
+                        <input type="submit" value="Cadastrar" className="CP-Cadastro" />
                     </form>
                 </main>
             </div>
