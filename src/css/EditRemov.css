@@ -1,7 +1,8 @@
-.loja {
-    height: 1500px;
-    background-color: #FFF8FC;
+body{
+    height: 1550px;
+    background-color: aqua !important;
 }
+
 
 .Pedro {
     max-width: 80%;

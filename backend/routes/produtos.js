@@ -7,8 +7,8 @@ router.post('/cp0', async (req, res) => {
     if (!nome || !preco || !quantidade || !autor || !descricao) {
         return res.status(400).json({message: 'Todos os campos precisam ser preenchidos'});
     }
-    const insertprodutosquery = "INSERT INTO produtos (nome, preco, quantidade, autor, descricao) VALUES (?, ?, ?, ?, ?)";
-    db.query(insertprodutosquery, [nome, preco, quantidade, autor, descricao], (err, result) =>{
+    const insertprodutosquery = "INSERT INTO produtos (nome, preco, quantidade, autor, descricao, id_user) VALUES (?, ?, ?, ?, ?, 1)";
+    db.query(insertprodutosquery, [nome, preco, quantidade, autor, descricao, id_user], (err, result) => {
         if (err) {
             console.error('Erro ao registrar produto:', err);
             return res.status(500).json({ message: 'Erro no servidor.' });
@@ -27,8 +27,18 @@ router.get('/loja', (req, res) => {
         res.status(200).json(results);
     });
 });
+router.get('/EditRemov', (req, res) => {
+    const selectProdutosQuery = "SELECT * FROM produtos";
+    db.query(selectProdutosQuery, (err, results) => {
+        if (err) {
+            console.error('Erro ao buscar produtos:', err);
+            return res.status(500).json({ message: 'Erro no servidor.' });
+        }
+        res.status(200).json(results);
+    });
+});
 
-router.delete('/loja/:id', (req, res) => {
+router.delete('/EditRemov/:id', (req, res) => {
     const { id } = req.params;
     const deleteProdutoQuery = "DELETE FROM produtos WHERE id_produto = ?";
     db.query(deleteProdutoQuery, [id], (err, result) => {
@@ -43,7 +53,7 @@ router.delete('/loja/:id', (req, res) => {
     });
 });
 
-router.put('/loja/:id', (req, res) => {
+router.put('/EditRemov/:id', (req, res) => {
     const { id } = req.params;
     const { nome, preco, quantidade, autor, descricao } = req.body;
     if (!nome || !preco || !quantidade || !autor || !descricao) {

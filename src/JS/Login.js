@@ -66,7 +66,7 @@ const Login = () => {
 
   return (
     <div className="tudoo">
-        <img src={require('../assets/Group 43.png')} className='fundo-login' alt="fundo-geometrico" width={950}/>
+      <img src={require('../assets/Group 43.png')} className='fundo-login' alt="fundo-geometrico" width={950}/>
         <h2 className="form-titulo">Faça seu login</h2>
       <form onSubmit={handleSubmit} className="form-login">
         <div className="input-group">

@@ -20,9 +20,11 @@ create table produtos(
     quantidade int not null,
     descricao text,
     id_user int not null,
-
+    autor varchar(255),
     foreign key (id_user) references usuarios(id_user)
 )
 
-
 select * from produtos;
+select * from usuarios;
+
+ALTER TABLE produtos MODIFY id_user int DEFAULT NULL;

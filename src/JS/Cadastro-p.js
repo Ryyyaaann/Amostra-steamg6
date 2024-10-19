@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import '../css/cp0.css'
 
+
 class CP0 extends React.Component {
     constructor(props) {
         super(props);
@@ -22,13 +23,15 @@ class CP0 extends React.Component {
     handleSubmit = async (event) => {
         event.preventDefault();
         const { nome, preco, quantidade, autor, descricao } = this.state;
+        const id_user = 1;
         try {
             const response = await axios.post('http://localhost:5000/api/produtos/cp0', {
                 nome,
                 preco,
                 quantidade,
                 autor,
-                descricao
+                descricao,
+                id_user
             });
             console.log(response);
             this.setState({
