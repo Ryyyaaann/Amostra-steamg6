@@ -131,7 +131,7 @@ class Cadastro extends React.Component {
         this.setState({ errorMessage: 'Erro ao processar o cadastro. Por favor, tente novamente.' });
       }
     }
-  }  
+  }
 
   render() {
     const { showPassword, validationErrors } = this.state;
@@ -139,62 +139,66 @@ class Cadastro extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} className='form-cadastro'>
         <div className='realizecadastro'>
-          <h2 className='titulo-cadastro'>REALIZE O SEU CADASTRO!</h2>
+          <img src={require('../assets/Group 49.png')} className='fundo-cadastro' alt="fundo-geometrico" width={400}/>
         </div>
+        <div className='itens-form'>
         <label for="nome">Nome:</label>
-        <input 
-          type="text" 
-          id="nome" 
-          name="nome" 
-          placeholder="Insira seu nome" 
-          required 
-          value={this.state.nome} 
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Insira seu nome"
+          required
+          value={this.state.nome}
           onChange={this.handleInputChange}
           onBlur={this.handleBlur}
           className={`form-item ${validationErrors.nome ? 'error' : ''}`}
-        />
+          />
         {validationErrors.nome && <div className="error-message">{validationErrors.nome}</div>}
         <br />
         <label for="nome">Apelido:</label>
-        <input 
-          type="text" 
-          id="sobrenome" 
-          name="sobrenome" 
-          placeholder="Insira seu apelido, será assim que irão te ver no site..." 
-          required 
-          value={this.state.sobrenome} 
+        <input
+          type="text"
+          id="sobrenome"
+          name="sobrenome"
+          placeholder="Insira seu apelido, será assim que irão te ver no site..."
+          required
+          value={this.state.sobrenome}
           onChange={this.handleInputChange}
           onBlur={this.handleBlur}
           className={`form-item ${validationErrors.sobrenome ? 'error' : ''}`}
-        />
+          />
         {validationErrors.sobrenome && <div className="error-message">{validationErrors.sobrenome}</div>}
         <br />
-        <input 
-          type="email" 
-          id="email" 
-          name="email" 
-          placeholder="E-mail" 
-          required 
-          value={this.state.email} 
+        <label for="nome">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="E-mail"
+          required
+          value={this.state.email}
           onChange={this.handleInputChange}
           onBlur={this.handleBlur}
           className={`form-item ${validationErrors.email ? 'error' : ''}`}
-        />
+          />
         {validationErrors.email && <div className="error-message">{validationErrors.email}</div>}
         <br />
-        <input 
-          type="text" 
-          id="username" 
-          name="username" 
-          placeholder="Username" 
-          required 
-          value={this.state.username} 
+        <label for="nome">Nome de Usuário:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Username"
+          required
+          value={this.state.username}
           onChange={this.handleInputChange}
           onBlur={this.handleBlur}
           className={`form-item ${validationErrors.username ? 'error' : ''}`}
-        />
+          />
         {validationErrors.username && <div className="error-message">{validationErrors.username}</div>}
         <br />
+        <label for="nome">CPF:</label>
         <InputMask
           mask="999.999.999-99"
           id="cpf"
@@ -205,55 +209,59 @@ class Cadastro extends React.Component {
           onChange={this.handleInputChange}
           onBlur={this.handleBlur}
           className={`form-item ${validationErrors.cpf ? 'error' : ''}`}
-        />
+          />
         {validationErrors.cpf && <div className="error-message">{validationErrors.cpf}</div>}
         <br />
-        <input 
-          type={showPassword ? "text" : "password"} 
-          id="password" 
-          name="password" 
-          placeholder="Senha" 
+        <label for="nome">Senha:</label>
+        <input
+          type={showPassword ? "text" : "password"}
+          id="password"
+          name="password"
+          placeholder="Senha"
           required
-          value={this.state.password} 
+          value={this.state.password}
           onChange={this.handleInputChange}
           onBlur={this.handleBlur}
-          className={`form-item ${validationErrors.password ? 'error' : ''}`} 
-        />
+          className={`form-item ${validationErrors.password ? 'error' : ''}`}
+          />
         <span className="password-toggle2" onClick={this.togglePasswordVisibility}>
           {showPassword ? <FaEyeSlash /> : <FaEye />}
         </span>
         {validationErrors.password && <div className="error-message">{validationErrors.password}</div>}
         <br />
-        <input 
-          type={showPassword ? "text" : "password"} 
-          id="confirmaPassword" 
-          name="confirmaPassword" 
-          placeholder="Confirme a Senha" 
+        <label for="nome">Confirme sua Senha:</label>
+        <input
+          type={showPassword ? "text" : "password"}
+          id="confirmaPassword"
+          name="confirmaPassword"
+          placeholder="Confirme a Senha"
           required
-          value={this.state.confirmaPassword} 
+          value={this.state.confirmaPassword}
           onChange={this.handleInputChange}
           onBlur={this.handleBlur}
           className={`form-item ${validationErrors.confirmaPassword ? 'error' : ''}`}
-        />
+          />
         {validationErrors.confirmaPassword && <div className="error-message">{validationErrors.confirmaPassword}</div>}
         <br />
+        <label for="nome">Data de Nascimento:</label>
         <InputMask
           mask="99/99/9999"
           id="dataNascimento"
           name="dataNascimento"
-          placeholder="Data de Nascimento (DD/MM/AAAA)" 
-          required 
-          value={this.state.dataNascimento} 
+          placeholder="Data de Nascimento (DD/MM/AAAA)"
+          required
+          value={this.state.dataNascimento}
           onChange={this.handleInputChange}
           onBlur={this.handleBlur}
           className={`form-item ${validationErrors.dataNascimento ? 'error' : ''}`}
-        />
+          />
         {validationErrors.dataNascimento && <div className="error-message">{validationErrors.dataNascimento}</div>}
         <br/>
         {this.state.errorMessage && <div className="error-message">{this.state.errorMessage}</div>}
         {this.state.successMessage && <div className="success-message">{this.state.successMessage}</div>}
         <br />
         <input className='form-submit-cadastro' type="submit" value="Cadastrar" />
+        </div>
       </form>
     );
   }

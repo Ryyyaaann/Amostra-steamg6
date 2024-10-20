@@ -26,6 +26,20 @@
             "name": "root",
             "database": "aulaa",
             "username": "root"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "mostrag6",
+            "group": "grupo6",
+            "database": "mostra",
+            "username": "root"
         }
     ]
 }

@@ -1,12 +1,15 @@
 body {
     font-family: 'Homenaje', sans-serif;
-    color: #333;
+    color: #B95267;
     margin: 0;
     padding: 0;
+    font-size: large;
 }
 
 .form-cadastro {
+    top: 10px;
     width: 450px;
+    height: 800px;
     padding: 50px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
@@ -27,8 +30,21 @@ body {
     letter-spacing: 1px;
 }
 
+.realizecadastro{
+    position: relative;
+    bottom: 50px;
+
+}
+
+.itens-form{
+    position: relative;
+    bottom: 100px;
+
+}
+
 .form-item {
     width: calc(100% - 20px);
+    position: relative;
     padding: 15px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -60,6 +76,14 @@ body {
 .form-submit-cadastro:hover {
     background-color: #4db8ba;
 }
+
+.fundo-cadastro{
+    
+    position: relative;
+    top: -100px;
+    left: 30px;
+}
+
 
 .error-message {
     color: #e2031a;

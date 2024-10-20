@@ -17,7 +17,7 @@ function Comunidade() {
             <div className='cartoes1'>
                 <div className="card" style={{ backgroundColor: '#FFDC52' }}>
                     <img
-                        // src={require('../assets/artistas-negras.png')} width={498}
+                         src={require('../assets/Rectangle 14.png')} width={498}
                         alt="Descrição da imagem"
                         className="card-img"
                     />
@@ -34,7 +34,7 @@ function Comunidade() {
 
                 <div className="card" style={{ backgroundColor: '#FF4D4D' }}>
                     <img
-                        // src={require('../assets/lgbtq.png')}
+                        src={require('../assets/Rectangle 31.png')}
                         alt="Descrição da imagem"
                         className="card-img"
                         width={498}
@@ -52,7 +52,7 @@ function Comunidade() {
 
                 <div className="card" style={{ backgroundColor: '#0C6893' }}>
                     <img
-                        // src={require('../assets/arte-game-3d.png')}
+                        src={require('../assets/Rectangle 39.png')}
                         alt="Descrição da imagem"
                         className="card-img"
                         width={498}
@@ -70,7 +70,7 @@ function Comunidade() {
             <div className='cartoes2'>
                 <div className="card" style={{ backgroundColor: '#303C4D' }}>
                     <img
-                        // src={require('../assets/arte-game-2d.png')}
+                        src={require('../assets/Rectangle 34.png')}
                         alt="Descrição da imagem"
                         className="card-img"
                         width={498}
@@ -88,7 +88,7 @@ function Comunidade() {
 
                 <div className="card" style={{ backgroundColor: '#F2A8F1' }}>
                     <img
-                        //src={require('../assets/arte-ceramica.png')}
+                        src={require('../assets/Rectangle 41.png')}
                         alt="Descrição da imagem"
                         className="card-img"
                         width={498}
@@ -107,7 +107,7 @@ function Comunidade() {
 
                 <div className="card" style={{ backgroundColor: '#F7E7B6' }}>
                     <img
-                        //src={require('../assets/animacao.png')}
+                        src={require('../assets/Rectangle 40.png')}
                         alt="Descrição da imagem"
                         className="card-img"
                         width={498}
