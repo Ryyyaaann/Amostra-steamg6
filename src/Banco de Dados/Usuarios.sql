@@ -18,7 +18,7 @@ create table produtos(
     nome varchar(255) not null,
     preco decimal(10, 2) not null,
     quantidade int not null,
-    autor varchar(255) not null,
+    autor varchar(254) not null,
     descricao text
 )
 

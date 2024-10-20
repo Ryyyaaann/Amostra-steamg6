@@ -14,7 +14,7 @@ import Perfil from './JS/Perfil'
 import Produto1 from './JS/Produto1'
 import Suporte from './JS/Suporte.js'
 import CP0 from './JS/Cadastro-p'
-
+// import EditRemov from './JS/EditRemov.js'
 
 
 

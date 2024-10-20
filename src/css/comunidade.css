@@ -177,6 +177,7 @@
   font-family: Arial, sans-serif;
   font-size: 16px;
 }
+
 .pagination a {
   color: #000;
   text-decoration: none;
@@ -185,8 +186,4 @@
   justify-content: center;
   align-items: center;
   width: 30px;
-  height: 30px;
-}
-.pagination a.disabled {
-  color: #b0b0b0;
 }
