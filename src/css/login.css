@@ -15,23 +15,30 @@
     border-radius: 33px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     text-align: center;
-    top: -100px;
     animation: fadeIn 0.7s ease-in-out;
+    transform: translate( 0,-450px);
 }
 
 .form-titulo {
     font-size: 70px;
     font-family: Homenaje;
     color: #B95267;
-    margin-bottom: 30px;
     letter-spacing: -2px;
     font-weight: 400;
     background-color: #fff;
     border-radius: 30px;
     padding: 8px 55px;
     margin-top: 0;
-    border: 1px solid #C7C7C7
-    
+    border: 1px solid #C7C7C7;
+    position: relative;
+    bottom: 410px;
+    z-index: 999;
+}
+
+.fundo-login{
+    padding: 0%;
+    top: 100px;
+    position: relative;
 }
 
 h4{
@@ -132,6 +139,8 @@ h4{
 .form-submit:hover {
     background-color: #3949ab;
 }
+
+
 
 @keyframes fadeIn {
     from {
