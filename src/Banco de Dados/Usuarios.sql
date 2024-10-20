@@ -25,3 +25,4 @@ create table produtos(
 drop table produtos
 
 select * from produtos
+ALTER TABLE produtos MODIFY id_user int DEFAULT NULL;
