@@ -1,53 +1,131 @@
 import React from "react";
 import '../css/comunidade.css';
-// import { User, ShoppingCart } from 'lucide-react'
 
 
 function Comunidade() {
     return (
-        <div className='comunidade'>
-            <div className='color-title'>  
-        <div>
-            <img src={require('../assets/grupo2.png')} className='grupo3-imagem' alt="nome" />
-            <img src={require('../assets/Grupo1.png')} className='grupo1-imagem' alt="nome" />
-            <img src={require('../assets/Exposicoes.png')} className='exposicoes-imagem' alt="nome" width={800}/>
-            <img src={require('../assets/grupo3.png')} className='grupo2-imagem' alt="nome" />
-            <img src={require('../assets/grupo4.png')} className='grupo4-imagem' alt="nome" />
-            <img src={require('../assets/grupo5.png')} className='grupo5-imagem' alt="nome" />
-                <p className='titulo-page'>Exposições</p>
-        </div>
-{/*       
+        <div className='comunidades'>
+            <div>
+                <img src={require('../assets/grupo2.png')} className='grupo3-imagem' alt="nome" />
+                <img src={require('../assets/Grupo1.png')} className='grupo1-imagem' alt="nome" />
+                <img src={require('../assets/Exposicoes.png')} className='exposicoes-imagem' alt="nome" width={800}/>
+                <img src={require('../assets/grupo3.png')} className='grupo2-imagem' alt="nome" />
+                <img src={require('../assets/grupo4.png')} className='grupo4-imagem' alt="nome" />
+                <img src={require('../assets/grupo5.png')} className='grupo5-imagem' alt="nome" />
+                    <p className='titulo-page'>Coletividades</p>
             </div>
-            <div className="user-actions">
-          <button  className="icon-button">
-         
-          </button>
-          <button  className="icon-button">
+            <div className='cartoes1'>
+                <div className="card" style={{ backgroundColor: '#FFDC52' }}>
+                    <img
+                         src={require('../assets/Rectangle 14.png')} width={498}
+                        alt="Descrição da imagem"
+                        className="card-img"
+                    />
+                    <div className="card-content">
+                        <div className="title-container">
+                            <h2 className="card-title">Artistas Negras</h2>
+                            <span className="verified-icon">
+                                <i className="fas fa-check-circle"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
 
-          </button>
+
+                <div className="card" style={{ backgroundColor: '#FF4D4D' }}>
+                    <img
+                        src={require('../assets/Rectangle 31.png')}
+                        alt="Descrição da imagem"
+                        className="card-img"
+                        width={498}
+                    />
+                    <div className="card-content">
+                        <div className="title-container">
+                            <h2 className="card-title">LGBTQIAPN+</h2>
+                            <span className="verified-icon">
+                                <i className="fas fa-check-circle"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div className="card" style={{ backgroundColor: '#0C6893' }}>
+                    <img
+                        src={require('../assets/Rectangle 39.png')}
+                        alt="Descrição da imagem"
+                        className="card-img"
+                        width={498}
+                    />
+                    <div className="card-content">
+                        <div className="title-container">
+                            <h2 className="card-title">Modelagem 3D</h2>
+                            <span className="verified-icon">
+                                <i className="fas fa-check-circle"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='cartoes2'>
+                <div className="card" style={{ backgroundColor: '#303C4D' }}>
+                    <img
+                        src={require('../assets/Rectangle 34.png')}
+                        alt="Descrição da imagem"
+                        className="card-img"
+                        width={498}
+                    />
+                    <div className="card-content">
+                        <div className="title-container">
+                            <h2 className="card-title">Modelagem 2D</h2>
+                            <span className="verified-icon">
+                                <i className="fas fa-check-circle"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div className="card" style={{ backgroundColor: '#F2A8F1' }}>
+                    <img
+                        src={require('../assets/Rectangle 41.png')}
+                        alt="Descrição da imagem"
+                        className="card-img"
+                        width={498}
+                    />
+                    <div className="card-content">
+                        <div className="title-container">
+                            <h2 className="card-title">Arte Realista</h2>
+                            <span className="verified-icon">
+                                <i className="fas fa-check-circle"></i>
+                            </span>
+                        </div>
+                       
+                    </div>
+                </div>
+
+
+                <div className="card" style={{ backgroundColor: '#F7E7B6' }}>
+                    <img
+                        src={require('../assets/Rectangle 40.png')}
+                        alt="Descrição da imagem"
+                        className="card-img"
+                        width={498}
+                    />
+                    <div className="card-content">
+                        <div className="title-container">
+                            <h2 className="card-title">Animação</h2>
+                            <span className="verified-icon">
+                                <i className="fas fa-check-circle"></i>
+                            </span>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
         </div>
-      <main className="main">
-        <h1 className="title">Comunidades</h1>
-        <div className="community-grid">
-          <CommunityCard title="Artistas negras" members={10589} color="orange" />
-          <CommunityCard title="LGBTQ+" members={9789} color="red" />
-          <CommunityCard title="Arte Game 2d" members={6846} color="blue" />
-          <CommunityCard title="Arte Game 3d" members={5200} color="purple" />
-          <CommunityCard title="Animação" members={7652} color="pink" />
-          <CommunityCard title="Arte ceramica" members={4846} color="brown" />
-        </div>
-        <nav className="pagination" aria-label="Page navigation">
-          <button className="page-link" aria-label="Previous page">&lt;</button>
-          <button className="page-link">1</button>
-          <button className="page-link">2</button>
-          <button className="page-link">3</button>
-          <button className="page-link">4...</button>
-          <button className="page-link" aria-label="Next page">&gt;</button>
-        </nav>
-      </main> */}
-        </div>
-        </div>
-    )
+    );
 }
+
 
 export default Comunidade;
