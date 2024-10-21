@@ -3,16 +3,15 @@ body {
     color: #B95267;
     margin: 0;
     padding: 0;
-    font-size: bolder;
-    height: 1300px;
+    font-size: large;
 }
 
 .form-cadastro {
-    top: 80px;
-    width: 350px;
-    height: 650px;
-    padding: 50px 30px 50px 50px;
-    background-color: #fff;
+    top: 10px;
+    width: 450px;
+    height: 800px;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     margin: 50px auto;
@@ -89,20 +88,8 @@ body {
     width: 300px;
     top: -90px;
     left: 30px;
-    
 }
 
-.fundo-forms{
-    position: relative;
-    right: 350px;
-    bottom: 200px;
-    z-index: 0;
-}
-
-.input-container {
-    position: relative;
-    margin-bottom: 20px; 
-}
 
 .error-message {
     color: #921420;

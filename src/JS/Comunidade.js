@@ -12,7 +12,7 @@ function Comunidade() {
                 <img src={require('../assets/grupo3.png')} className='grupo2-imagem' alt="nome" />
                 <img src={require('../assets/grupo4.png')} className='grupo4-imagem' alt="nome" />
                 <img src={require('../assets/grupo5.png')} className='grupo5-imagem' alt="nome" />
-                    <p className='titulo-page'>Comunidades</p>
+                    <p className='titulo-page'>Coletividades</p>
             </div>
             <div className='cartoes1'>
                 <div className="card" style={{ backgroundColor: '#FFDC52' }}>
