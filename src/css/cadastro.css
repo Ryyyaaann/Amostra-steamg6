@@ -7,7 +7,7 @@ body {
 }
 
 .form-cadastro {
-    top: 10px;
+    top: 55px;
     width: 350px;
     height: 650px;
     padding: 50px;
@@ -84,7 +84,7 @@ body {
     position: relative;
     width: 300px;
     top: -90px;
-    left: 30px;
+    left: 20px;
 }
 
 .fundo-forms{
