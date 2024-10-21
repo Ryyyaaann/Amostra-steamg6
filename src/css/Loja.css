@@ -116,7 +116,34 @@ grid-template-columns: repeat(5, 1fr);
 
 }
 /* Estilo geral do container de produtos */
-
+.botao-perfiladicionar {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .botao-perfiladicionar button {
+    background-color: #dd6afa; /* Cor verde */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .botao-perfiladicionar button:hover {
+    background-color: #9247a5; /* Cor verde mais escura */
+    transform: translateY(-2px); /* Efeito de levantar o botão */
+  }
+  
+  .botao-perfiladicionar button:active {
+    background-color: #542161; /* Cor verde ainda mais escura */
+    transform: translateY(0); /* Remover o efeito ao clicar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduzir a sombra ao clicar */
+  }
+  
 .produtos-lista{
     display: flex;
     gap: 30px;
@@ -139,10 +166,10 @@ grid-template-columns: repeat(5, 1fr);
 /* Placeholder para imagem */
 .image-placeholder {
     position: relative;
-    width: 170px;
-    height: 100px;
-    padding: 90px 40px 160px 50px;
-    background-color: #f0f0f0;
+    width: 260px;
+    height: 280px;
+    
+   
     border-radius: 10px;
     margin-bottom: 10px;
     z-index: 1;
@@ -154,7 +181,6 @@ grid-template-columns: repeat(5, 1fr);
     position: relative;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 0px;
     right: 0%;
     color: #333;
 }
@@ -165,12 +191,13 @@ grid-template-columns: repeat(5, 1fr);
     font-size: 0.9rem;
     color: #666;
     right: 0%;
+    bottom: 6%;
 }
 .product-autor{
     position: relative;
     color: #666;
     left: 5%;
-    bottom: 14%;
+    bottom: 15%;
     max-width: 15%;
     
 }
@@ -182,7 +209,7 @@ grid-template-columns: repeat(5, 1fr);
     max-width: 150px;
     white-space: nowrap;
     text-overflow: ellipsis;
-    bottom: 5%;
+    bottom: 12%;
 }
 .nomes{
     position: relative;

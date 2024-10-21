@@ -3,20 +3,27 @@ import { Star } from 'lucide-react'
 import '../css/Produto1.css'
 export default function ProductPage() {
   const [rating, setRating] = useState(0)
+  const [showMessage, setShowMessage] = useState(false);
 
+  const handleBuyClick = () => {
+    setShowMessage(true);
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 3000); // Mensagem desaparece após 3 segundos
+  };
   return (
     <div className="main">
       <div className='container'>
         <div className='Container2' style={{ flex: 1, marginRight: '30px' }}>
           <img className='imagem-main'
-            src="https://preview.redd.it/r6qgbeq4r6071.jpg?auto=webp&s=6fa12a1f4d57977988c9002fe904f286b11e865a" 
-            alt="Product Image" 
+            src={require('../assets/gatobaiacu.jpg')} alt="mulher"
+            alt="Gato Baiacu" 
           />
         </div>
         <div className='info-233'>
-          <h1 className='titulo-produto12' >The GOAT</h1>
-          <p className='descricao-produto12' >Griffith vulgo melhor personagem de todos e o aprendiz do P.DIDDY </p>
-          <p className='preco-produto12' >R$650,00</p>
+          <h1 className='titulo-produto12' >Um Gato Baiacu</h1>
+          <p className='descricao-produto12' >Um gato Baiacu fofo e engraçado </p>
+          <p className='preco-produto12' >R$150,00</p>
           <div className='avaliacao-produto12' >
             {[1, 2, 3, 4, 5].map((star) => (
               <Star
@@ -31,7 +38,14 @@ export default function ProductPage() {
           </div>
           <button className='botao-compra12' style={{}}
           onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#ff1493'}
-          onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#ff69b4'}> Comprar </button>
+          onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#ff69b4'} 
+          onClick={handleBuyClick}
+          > Comprar </button>
+            {showMessage && (
+            <div className="mensagem-sucesso">
+              Produto adicionado ao carrinho!
+            </div>
+          )}
         </div>
       </div>
     </div>

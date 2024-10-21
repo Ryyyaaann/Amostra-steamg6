@@ -54,7 +54,7 @@ class CP0 extends React.Component {
                 <section className="secao">
                     <h1>Cadastro produto</h1>
                 </section>
-                <img src={require('../assets/fundinho-cp0.png')} alt="fundinho" className="CP-imagem" />
+                <img src={require('../assets/fundinho-cp0.png')} alt="fundinho" className="CP-imagem" id="CP-imagem2" />
                 <main className="CP-Main">
                     <form onSubmit={this.handleSubmit} >
                         <label>Nome do produto:</label>

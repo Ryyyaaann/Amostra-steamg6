@@ -3,25 +3,30 @@ body {
     color: #B95267;
     margin: 0;
     padding: 0;
-    font-size: large;
+    font-size: bolder;
+    height: 1300px;
 }
 
 .form-cadastro {
-    top: 10px;
-    width: 450px;
-    height: 800px;
-    padding: 50px;
-    background-color: rgba(255, 255, 255, 0.9);
+    top: 80px;
+    width: 350px;
+    height: 650px;
+    padding: 50px 30px 50px 50px;
+    background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     margin: 50px auto;
     position: relative;
-    z-index: 1;
+    z-index: 999;
     animation: fadeIn 0.7s ease-in-out;
+    align-items: center;
+    justify-content: center;
+
 }
 
+
 .titulo-cadastro {
-    font-size: 30px;
+    font-size: 15px;
     text-align: center;
     color: #444;
     margin-bottom: 30px;
@@ -38,20 +43,22 @@ body {
 
 .itens-form{
     position: relative;
-    bottom: 100px;
-
+    bottom: 150%;
+    right: 10px;
 }
 
 .form-item {
+    height: 40px; 
     width: calc(100% - 20px);
     position: relative;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 14px; 
     background-color: #f9f9f9;
     transition: all 0.3s ease;
+    box-sizing: border-box; 
 }
 
 .form-item:focus {
@@ -61,7 +68,7 @@ body {
 }
 
 .form-submit-cadastro {
-    transform: translateX(150%);
+    transform: translateX(110%);
     padding: 15px;
     border-radius: 33px;
     background: linear-gradient(100deg, #FF4879 17.21%, #D649E3 89.48%);
@@ -78,31 +85,47 @@ body {
 }
 
 .fundo-cadastro{
-    
     position: relative;
-    top: -100px;
+    width: 300px;
+    top: -90px;
     left: 30px;
+    
 }
 
+.fundo-forms{
+    position: relative;
+    right: 350px;
+    bottom: 200px;
+    z-index: 0;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px; 
+}
 
 .error-message {
-    color: #e2031a;
-    font-size: 14px;
-    margin-top: 10px;
+    color: #921420;
+    font-size: 18px;
+    height: 15px; 
+    margin-top: 4px; 
+    position: absolute; 
+    top: 100%;
 }
-
 .success-message {
     color: #28a745;
     font-size: 14px;
     margin-top: 10px;
 }
 
-.password-toggle2{
+.password-toggle2 {
     position: absolute;
     right: 10%;
-    top: 60.6%;
+    top: 55%;
     cursor: pointer;
+    transform: translateY(-50%);
 }
+
 
 @keyframes fadeIn {
     from {

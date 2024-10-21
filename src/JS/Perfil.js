@@ -8,6 +8,7 @@ function Perfil() {
     if (activeTab === 'midia') {
       return (
         <div className="product-grid">
+         
           {[...Array(5)].map((_, index) => (
             <div key={index} className="product-card">
               <div className="product-image" />
