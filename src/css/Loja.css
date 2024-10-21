@@ -120,6 +120,7 @@ grid-template-columns: repeat(5, 1fr);
 .produtos-lista{
     display: flex;
     gap: 30px;
+    text-decoration: none;
 }
 /* Estilo do card de produto */
 .produto-card {

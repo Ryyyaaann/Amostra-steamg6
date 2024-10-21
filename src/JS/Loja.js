@@ -39,12 +39,12 @@ const Loja = () => {
                 <p>Descrição basica</p>
                 <p>Preço: R$</p>
             </div> */}
-            <main className="main">
-        </main>
+            
         <div className="product-grid">
             
         <div className="produtos-lista">
-                {produtos.map(produto => (
+               <a href="Produto1" className="produtos-lista">
+               {produtos.map(produto => (
                     <div key={produto.id} className="produto-card">
                         <div className="image-placeholder"></div>
                         <div className="nomes">
@@ -56,7 +56,7 @@ const Loja = () => {
                         </div>
                     </div>
                 ))}
-               
+               </a>
             </div>
         </div>
         </div>
