@@ -39,20 +39,26 @@ const Loja = () => {
                 <p>Descrição basica</p>
                 <p>Preço: R$</p>
             </div> */}
-            <main className="main">
-        </main>
+            
+        <div className="product-grid">
+            
         <div className="produtos-lista">
-                {produtos.map(produto => (
+               <a href="Produto1" className="produtos-lista">
+               {produtos.map(produto => (
                     <div key={produto.id} className="produto-card">
-                        <h2>{produto.nome}</h2>
-                        <p>Preço: R$ {produto.preco}</p>
-                        <p>Autor: {produto.autor}</p>
-                        <p>{produto.descricao}</p>
-                        <p>Quantidade disponível: {produto.quantidade}</p>
+                        <div className="image-placeholder"></div>
+                        <div className="nomes">
+                            <h2 className="product-name">{produto.nome}</h2>
+                            <p className="product-price">Preço: R$ {produto.preco}</p>
+                            <p className="product-description">{produto.descricao}</p>
+                            <p className="quantidade-product">Quantidade disponível: {produto.quantidade}</p>
+                            <p className="product-autor">Autor: {produto.autor}</p>
+                        </div>
                     </div>
                 ))}
-               
+               </a>
             </div>
+        </div>
         </div>
     </div>
     )

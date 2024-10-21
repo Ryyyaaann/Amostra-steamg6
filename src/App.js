@@ -15,7 +15,7 @@ import Produto1 from './JS/Produto1'
 import Suporte from './JS/Suporte.js'
 import CP0 from './JS/Cadastro-p'
 // import EditRemov from './JS/EditRemov.js'
-
+import Carrinho from './JS/Carrinho.js';
 
 
 
@@ -40,6 +40,7 @@ function App() {
             <Route exact path="/Produto1" element={<Produto1/>} />
             <Route exact path="/Suporte" element={<Suporte/>} />
             <Route exact path="/cp0" element={<CP0/>} />
+            <Route exact path="/Carrinho" element={<Carrinho/>} />
           </Routes>
         <Footer/>
         </Router>

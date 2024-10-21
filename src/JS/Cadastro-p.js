@@ -30,8 +30,8 @@ class CP0 extends React.Component {
                 preco,
                 quantidade,
                 autor,
-                descricao,
-                id_user
+                descricao
+               
             });
             console.log(response);
             this.setState({

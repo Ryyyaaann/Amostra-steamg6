@@ -7,8 +7,8 @@ router.post('/cp0', async (req, res) => {
     if (!nome || !preco || !quantidade || !autor || !descricao) {
         return res.status(400).json({message: 'Todos os campos precisam ser preenchidos'});
     }
-    const insertprodutosquery = "INSERT INTO produtos (nome, preco, quantidade, autor, descricao, id_user) VALUES (?, ?, ?, ?, ?, 1)";
-    db.query(insertprodutosquery, [nome, preco, quantidade, autor, descricao, id_user], (err, result) => {
+    const insertprodutosquery = "INSERT INTO produtos (nome, preco, quantidade, autor, descricao) VALUES (?, ?, ?, ?, ?)";
+    db.query(insertprodutosquery, [nome, preco, quantidade, autor, descricao], (err, result) => {
         if (err) {
             console.error('Erro ao registrar produto:', err);
             return res.status(500).json({ message: 'Erro no servidor.' });

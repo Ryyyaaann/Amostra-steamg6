@@ -30,7 +30,7 @@ function Navbar() {
           <Link to="/Comunidade" className={`nav-link ${darkMode ? 'dark-mode' : ''}`}>Comunidade</Link>
         </li>
         <li className="nav-item">
-          <Link to="/Perfil" className={`nav-link-carrinho ${darkMode ? 'dark-mode' : ''}`}><McQueen /></Link>
+          <Link to="/Carrinho" className={`nav-link-carrinho ${darkMode ? 'dark-mode' : ''}`}><McQueen /></Link>
         </li>
         <li className="nav-item">
           <Link to="/Perfil" className={`nav-link-perfil ${darkMode ? 'dark-mode' : ''}`}>Perfil</Link>
