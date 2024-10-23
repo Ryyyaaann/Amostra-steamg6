@@ -1,3 +1,5 @@
+// App.js
+
 import './App.css'
 import Navbar from './JS/Navbar.js'
 import React from 'react'
@@ -14,8 +16,9 @@ import Perfil from './JS/Perfil'
 import Produto1 from './JS/Produto1'
 import Suporte from './JS/Suporte.js'
 import CP0 from './JS/Cadastro-p'
-// import EditRemov from './JS/EditRemov.js'
+import EditRemov from './JS/EditRemov'
 import Carrinho from './JS/Carrinho.js';
+import DeleteProduto from './JS/Delete'
 
 
 
@@ -41,6 +44,8 @@ function App() {
             <Route exact path="/Suporte" element={<Suporte/>} />
             <Route exact path="/cp0" element={<CP0/>} />
             <Route exact path="/Carrinho" element={<Carrinho/>} />
+            <Route exact path="/EditRemov/:id" element={<EditRemov/>} />
+            <Route exact path="/deletar/:id" element={<DeleteProduto/>} />
           </Routes>
         <Footer/>
         </Router>

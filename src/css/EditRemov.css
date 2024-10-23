@@ -1,25 +1,98 @@
-body{
-    height: 1550px;
-    background-color: aqua !important;
+.EditRemov {
+    height: auto;
+    margin: 0;
+    padding: 0;
 }
 
+.EditRemov-imagem {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: -1;
+    opacity: 0%;
+}
 
-.Pedro {
-    max-width: 80%;
+.secao {
+    width: 20%;
     margin: 0 auto;
-    font-family: "Work Sans", sans-serif;
-    white-space: nowrap ;
-    height: 900px;
+    padding: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 50px;
+    z-index: 1;
+    color: #fff;
+}
+
+.secao h1 {
+    font-size: 55px;
+    color: #B95267;
+}
+
+.EditRemov-Main {
     position: relative;
-    bottom: -4%;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    margin-bottom: 50px;
+    z-index: 1;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.EditRemov-Main form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 99;
+    color: #fff;
     
 }
-.product-card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+.EditRemov-Main form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #B95267;
+}
+
+.EditRemov-input {
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.EditRemov-Cadastro {
+    position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    }
+    margin-top: 20px;
+    width: 30%;
+    font-size: 30px;
+    left: 32%;
+    background: linear-gradient(100deg, #FF4879 17.21%, #D649E3 89.48%);
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: #fff;
+}
+
+.EditRemov-Cadastro:hover {
+    transform: translateY(-5px);
+}
+
+form {
+    position: relative;
+    z-index: 99;
+}

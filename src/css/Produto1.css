@@ -1,3 +1,10 @@
+.baiacu{
+  height: auto;
+  margin: 0;
+  padding: 0;
+
+}
+
 .main{
   background-Color: #fff1f6;
   min-Height: 100vh;
@@ -6,6 +13,7 @@
   align-Items: center;
   font-Family: Arial, sans-serif;
   padding: 20px;
+
 }
 .container{
   background-Color: white;
@@ -15,6 +23,7 @@
   display: flex;
   max-Width: 800px;
   width: 100%;
+
 }
 .container2{
   flex: 1; 
@@ -27,6 +36,7 @@
   border-radius: 10px;
   position: relative;
   right: 15%;
+  
 }
 .info-233{
   flex: 1;

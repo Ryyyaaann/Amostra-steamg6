@@ -14,9 +14,16 @@ code {
     monospace, Roboto;
 }
 /* Dark Mode */
-body.dark-mode {
+body.dark-mode, .dark-mode .loja {
   background-color: #2c003e; /* Fundo roxo escuro */
-  color: #000000; /* Texto branco */
+  color: #ffffff; /* Texto branco */
+  background-image: url('./assets/estrelinhas.png'); /* Imagem de estrelas no fundo */
+}
+
+.dark-mode .comunidades, .dark-mode .page, .dark-mode .baiacu {
+  background-color: #2c003e; /* Fundo roxo escuro */
+  color: black;
+  background-image: url('./assets/estrelinhas.png'); /* Imagem de estrelas no fundo */
 }
 
 .navbar.dark-mode {
@@ -47,9 +54,8 @@ body.dark-mode {
 
 .dark-mode .footer,
 .dark-mode .footer-bottom {
-  background-color:  #8e007e !important; /* Roxo escuro */
-  color: #000000 !important;
-  background-image: url('./assets/estrelinhas.png'); /* Imagem de estrelas no fundo */
+  background-color:  #420270 !important; /* Roxo escuro */
+  color: #ffffff !important;
 }
 
 .dark-mode .footer-heading,
@@ -58,7 +64,7 @@ body.dark-mode {
 .dark-mode .footer-description,
 .dark-mode .social-links a,
 .dark-mode .footer-bottom {
-  color: #000000;
+  color: #ffffff;
 }
 
 .dark-mode .button-section .button {
@@ -76,6 +82,7 @@ body.dark-mode {
 }
 
 /* Estrelas no background */
-body.dark-mode {
-  background-image: url('./assets/estrelinhas.png'); /* Imagem de estrelas no fundo */
+
+.dark-mode .Imagem2{
+  opacity: 0%;
 }

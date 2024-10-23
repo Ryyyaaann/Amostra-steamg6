@@ -25,6 +25,7 @@
     position: relative;
     top: 500px;
     z-index: -1;
+    opacity: 0%;
 }
 .form-titulo {
     font-size: 70px;

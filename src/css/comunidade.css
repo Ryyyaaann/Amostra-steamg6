@@ -1,3 +1,9 @@
+.comunidades{
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
 .exposicoes-imagem{
   position: absolute;
   top: -5%;

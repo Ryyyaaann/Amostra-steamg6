@@ -1,3 +1,5 @@
+// produtos.js
+
 const express = require('express');
 const router = express.Router();
 const db = require('../config/db');
@@ -38,10 +40,10 @@ router.get('/EditRemov', (req, res) => {
     });
 });
 
-router.delete('/EditRemov/:id', (req, res) => {
+router.delete('/deletar/:id', (req, res) => {
     const { id } = req.params;
-    const deleteProdutoQuery = "DELETE FROM produtos WHERE id_produto = ?";
-    db.query(deleteProdutoQuery, [id], (err, result) => {
+    const deleteQuery = "DELETE FROM produtos WHERE id_produto = ?";
+    db.query(deleteQuery, [id], (err, result) => {
         if (err) {
             console.error('Erro ao deletar produto:', err);
             return res.status(500).json({ message: 'Erro no servidor.' });
@@ -56,11 +58,9 @@ router.delete('/EditRemov/:id', (req, res) => {
 router.put('/EditRemov/:id', (req, res) => {
     const { id } = req.params;
     const { nome, preco, quantidade, autor, descricao } = req.body;
-    if (!nome || !preco || !quantidade || !autor || !descricao) {
-        return res.status(400).json({ message: 'Todos os campos precisam ser preenchidos' });
-    }
-    const updateProdutoQuery = "UPDATE produtos SET nome = ?, preco = ?, quantidade = ?, autor = ?, descricao = ? WHERE id_produto = ?";
-    db.query(updateProdutoQuery, [nome, preco, quantidade, autor, descricao, id], (err, result) => {
+
+    const updateQuery = "UPDATE produtos SET nome = ?, preco = ?, quantidade = ?, autor = ?, descricao = ? WHERE id_produto = ?";
+    db.query(updateQuery, [nome, preco, quantidade, autor, descricao, id], (err, result) => {
         if (err) {
             console.error('Erro ao atualizar produto:', err);
             return res.status(500).json({ message: 'Erro no servidor.' });
