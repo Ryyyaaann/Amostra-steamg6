@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import '../css/Loja.css';
-import { ReactComponent as Setinha } from '../assets/setinha.svg';
-import { Link } from'react-router-dom';
+import { Link } from "react-router-dom";
 
 
 const Loja = () => {
@@ -45,46 +44,22 @@ const Loja = () => {
         <div className="produtos-lista">
                <a href="Produto1" className="produtos-lista">
                {produtos.map(produto => (
-                    <div key={produto.id} className="produto-card">
-                        <div className="image-placeholder"><img className='image-placeholder'
-            src={require('../assets/gatobaiacu.jpg')} alt="mulher"
-            alt="Gato Baiacu" 
-          /></div>
-                        <div className="nomes">
-                            <h2 className="product-name">{produto.nome}</h2>
-                            <p className="product-price">Preço: R$ {produto.preco}</p>
-                            <p className="product-description">{produto.descricao}</p>
-                            {/* <p className="quantidade-product">Quantidade disponível: {produto.quantidade}</p> */}
-                            <p className="product-autor">Autor: {produto.autor}</p>
-                        </div>
-                    </div>
-                ))}
-                    <div  className="produto-card">
-                        <div className="image-placeholder"><img className='image-placeholder'
-            src={require('../assets/oncaskate.jpg')} alt="mulher"
-            alt="Gato Baiacu" 
-          /></div>
-                        <div className="nomes">
-                            <h2 className="product-name">Uma onça no skate</h2>
-                            <p className="product-price">Preço: R$30,00 </p>
-                            <p className="product-description">Uma onça sobre o skate</p>
-                            {/* <p className="quantidade-product">Quantidade disponível: {produto.quantidade}</p> */}
-                            <p className="product-autor">Autor: Vitor Ferreira </p>
-                        </div>
-                    </div>
-                    <div  className="produto-card">
-                        <div className="image-placeholder"><img className='image-placeholder'
-            src={require('../assets/peixefone.jpg')} alt="mulher"
-            alt="Gato Baiacu" 
-          /></div>
-                        <div className="nomes">
-                            <h2 className="product-name">Uma peixe com o fone</h2>
-                            <p className="product-price">Preço: R$450,00 </p>
-                            <p className="product-description">Uma peixe utilizando um fone</p>
-                            {/* <p className="quantidade-product">Quantidade disponível: {produto.quantidade}</p> */}
-                            <p className="product-autor">Autor: Pedro Guilherme </p>
-                        </div>
-                    </div>
+    <div key={produto.id_produto} className="produto-card">
+    <Link to={`/produto/${produto.id_produto}`}>  {/* Link dinâmico para a página do produto */}
+      <div className="image-placeholder">
+        <img className='image-placeholder'
+          src={`http://localhost:5000${produto.imagem_url}`} // Certifique-se de que as imagens estão vindo corretamente
+          alt={produto.nome} 
+        />
+      </div>
+      <div className="nomes">
+        <h2 className="product-name">{produto.nome}</h2>
+        <p className="product-price">Preço: R$ {produto.preco}</p>
+        <p className="product-description">{produto.descricao}</p>
+      </div>
+    </Link>
+    </div>
+    ))}
                </a>
             </div>
         </div>

@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Trash2, Plus, Minus } from 'lucide-react';
 import '../css/carrinho.css';
 
-// Importa as imagens locais corretamente
-import imagem22 from '../assets/gatobaiacu.jpg';
-import imagem23 from '../assets/oncaskate.jpg';
-import imagem24 from '../assets/peixefone.jpg';
-
 export default function Carrinho() {
-  const [cartItems, setCartItems] = useState([
-    { id: 1, name: 'Caska a braba', price: 150.00 , quantity: 1, image: imagem22 },
-    { id: 2, name: 'Guts o brabo', price: 30.00, quantity: 2, image: imagem23 },
-    { id: 3, name: 'The GOAT', price: 450.00, quantity: 1, image: imagem24 },
-  ]);
+  const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
+    setCartItems(storedCart);
+  }, []);
 
   const updateQuantity = (id, change) => {
-    setCartItems(cartItems.map(item =>
-      item.id === id ? { ...item, quantity: Math.max(0, item.quantity + change) } : item
-    ).filter(item => item.quantity > 0));
+    const updatedCart = cartItems.map(item =>
+      item.id === id ? { ...item, quantity: Math.max(1, item.quantity + change) } : item
+    );
+    setCartItems(updatedCart);
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
   };
 
   const removeItem = (id) => {
-    setCartItems(cartItems.filter(item => item.id !== id));
+    const updatedCart = cartItems.filter(item => item.id !== id);
+    setCartItems(updatedCart);
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
   };
 
   const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -35,7 +35,7 @@ export default function Carrinho() {
             <img src={item.image} alt={item.name} className="itemImage" />
             <div className="itemDetails">
               <h3 className="itemName">{item.name}</h3>
-              <p className="itemPrice">R$ {item.price.toFixed(2)}</p>
+              <p className="itemPrice">R$ {Number(item.price).toFixed(2)}</p>
             </div>
             <div className="quantityControl">
               <button className="quantityButton" onClick={() => updateQuantity(item.id, -1)}>
@@ -53,10 +53,10 @@ export default function Carrinho() {
         ))}
         <div className="summary">
           <p className="total">Total: R$ {total.toFixed(2)}</p>
-          <button 
+          <button
             className="checkoutButton"
-            onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#FF1493'}
-            onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#FF69B4'}
+            onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#FF1493')}
+            onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#FF69B4')}
           >
             Finalizar Compra
           </button>

@@ -24,3 +24,4 @@ create table produtos(
 
 select * from produtos
 ALTER TABLE produtos MODIFY id_user int DEFAULT NULL;
+ALTER TABLE produtos ADD imagem_url VARCHAR(255);

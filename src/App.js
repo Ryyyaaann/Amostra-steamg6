@@ -13,7 +13,7 @@ import Sobre from './JS/Sobre.js'
 import Loja from './JS/Loja.js'
 import Comunidade from './JS/Comunidade'
 import Perfil from './JS/Perfil'
-import Produto1 from './JS/Produto1'
+import ProductPage from './JS/Produto1.js'
 import Suporte from './JS/Suporte.js'
 import CP0 from './JS/Cadastro-p'
 import EditRemov from './JS/EditRemov.js'
@@ -40,7 +40,7 @@ function App() {
             <Route exact path="/Lojalogin" element={<Loja/>} />
             <Route exact path="/Comunidade" element={<Comunidade/>} />
             <Route exact path="/Perfil" element={<Perfil/>} />
-            <Route exact path="/Produto1" element={<Produto1/>} />
+            <Route exact path="/produto/:id" element={<ProductPage/>} />
             <Route exact path="/Suporte" element={<Suporte/>} />
             <Route exact path="/cp0" element={<CP0/>} />
             <Route exact path="/Carrinho" element={<Carrinho/>} />
