@@ -16,7 +16,7 @@ import Perfil from './JS/Perfil'
 import ProductPage from './JS/Produto1.js'
 import Suporte from './JS/Suporte.js'
 import CP0 from './JS/Cadastro-p'
-import EditRemov from './JS/EditRemov.js'
+import EditProduto from './JS/EditRemov.Js'
 import Carrinho from './JS/Carrinho.js';
 import DeleteProduto from './JS/Delete.js'
 
@@ -44,7 +44,7 @@ function App() {
             <Route exact path="/Suporte" element={<Suporte/>} />
             <Route exact path="/cp0" element={<CP0/>} />
             <Route exact path="/Carrinho" element={<Carrinho/>} />
-            <Route exact path="/EditRemov/:id" element={<EditRemov/>} />
+            <Route exact path="/EditRemov/:id" element={<EditProduto/>} />
             <Route exact path="/deletar/:id" element={<DeleteProduto/>} />
           </Routes>
         <Footer/>

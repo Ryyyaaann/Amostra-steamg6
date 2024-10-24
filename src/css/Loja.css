@@ -2,7 +2,10 @@
     height: auto;
     background-color: #FFF8FC;
 }
+.links12{
+    text-decoration: none;
 
+}
 .exposicoes-imagem{
     position: absolute;
     top: -5%;

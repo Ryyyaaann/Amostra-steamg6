@@ -21,6 +21,7 @@ create table produtos(
     autor varchar(254) not null,
     descricao text
 )
+DESCRIBE produtos;
 
 select * from produtos
 ALTER TABLE produtos MODIFY id_user int DEFAULT NULL;

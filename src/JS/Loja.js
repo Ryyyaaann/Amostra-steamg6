@@ -45,7 +45,7 @@ const Loja = () => {
                <a href="Produto1" className="produtos-lista">
                {produtos.map(produto => (
     <div key={produto.id_produto} className="produto-card">
-    <Link to={`/produto/${produto.id_produto}`}>  {/* Link dinâmico para a página do produto */}
+    <Link className="links12" to={`/produto/${produto.id_produto}`}>  {/* Link dinâmico para a página do produto */}
       <div className="image-placeholder">
         <img className='image-placeholder'
           src={`http://localhost:5000${produto.imagem_url}`} // Certifique-se de que as imagens estão vindo corretamente

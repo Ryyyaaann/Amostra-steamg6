@@ -3,12 +3,13 @@ import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../css/EditRemov.css';
 
-const EditProduto = () => {
+
+const EditRemov = () => {
     const { id } = useParams();
     const [produto, setProduto] = useState({ nome: '', preco: '', quantidade: '', autor: '', descricao: '' });
     const navigate = useNavigate();
-
-    useEffect(() => {
+    
+        useEffect(() => {
         const fetchProduto = async () => {
             try {
                 const response = await axios.get(`http://localhost:5000/api/produtos/EditRemov/${id}`);
@@ -62,4 +63,4 @@ const EditProduto = () => {
     );
 };
 
-export default EditProduto;
+export default EditRemov;
