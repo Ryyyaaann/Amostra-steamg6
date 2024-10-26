@@ -131,3 +131,220 @@ body{
     transform: translateX(-400px);
 
 }
+@media (max-width: 1760px) {
+  .lowcontainer {
+    transform: translateX(-300px);
+  }
+  .descContainer{
+    transform: translateX(-60px);
+  }
+}
+
+@media (max-width: 1680px) {
+  .lowcontainer {
+    transform: translateX(-270px);
+  }
+  .descContainer{
+    transform: translateX(-80px);
+  }
+}
+
+@media (max-width: 1600px) {
+    .lowcontainer {
+    transform: translateX(-230px);
+  }
+  .descContainer{
+    transform: translateX(-110px);
+  }
+  .name{
+    font-size: 25px;
+   
+  }
+}
+
+@media (max-width: 1440px) {
+    .lowcontainer {
+    transform: translateX(-150px);
+  }
+  .descContainer{
+    transform: translateX(-160px);
+  }
+  .name{
+    font-size: 25px !important;
+  }
+.suporte {
+    position: relative;
+    top: 21.8%;
+    transform: translateX(50px);
+}
+.suporte section {
+    position: relative;
+    left: 62%;
+    top: 340px;
+    background-color: #F85F94;
+    color: white;
+    width: 580px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 0px 0px 20px 0px;
+}
+.suporte section h1 {
+    position: relative;
+    font-family: "Homenaje", sans-serif;
+    font-size: 70px;
+    font-weight: lighter;
+    margin-top: 100px;
+    padding: 20px 0px;
+}
+.suporte section p {
+    position: relative;
+    font-family: "RocknRoll One", sans-serif;
+    font-size: 18px;
+    width: 60%;
+    margin-top: 25px;
+    left: 20%;
+}
+.suporte section span {
+    position: relative;
+    font-family: "RocknRoll One", sans-serif;
+    font-size: 18px;
+    color: #0C0400;
+}
+
+}
+@media (max-width: 1280px) {
+    .titulo {
+        font-size: 60px;
+        padding-left: 40px;
+    }
+
+    .subtitulo p {
+        font-size: 18px;
+    }
+
+    .lowcontainers h1 {
+        font-size: 60px;
+
+    .lowcontainers p {
+        font-size: 16px;
+    }
+
+    .lowcontainers h3 {
+        font-size: 28px;
+    }
+
+    .suporti section {
+        width: 35%;
+        left: 5%;
+    }
+}
+}
+@media (max-width: 992px) {
+    .titulo {
+        font-size: 50px;
+        padding-left: 30px;
+    }
+
+    .subtitulo p {
+        font-size: 16px;
+    }
+
+    .lowcontainers h1 {
+        font-size: 50px;
+    }
+
+    .lowcontainers p {
+        font-size: 15px;
+        width: 80%;
+    }
+
+    .lowcontainers h3 {
+        font-size: 26px;
+    }
+
+    .suporti section {
+        width: 45%;
+        left: 2%;
+    }
+}
+
+@media (max-width: 768px) {
+    .under-content{
+        display:block;
+        width:100%;
+        margin-top:0%;
+    }
+    .titulo {
+        font-size: 25px;
+        padding-left: -2px;
+    }
+
+    .subtitulo p {
+        font-size: 14px;
+    }
+
+    .lowcontainers h1 {
+        font-size: 40px;
+    }
+
+    .lowcontainers p {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .lowcontainers h3 {
+        font-size: 24px;
+    }
+
+    .suporti{
+        width: 80%;
+        justify-content:center;
+    }
+    .suporti section {
+        width: 100%;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 576px) {
+    .titulo {
+        font-size: 30px;
+        padding-left: 10px;
+    }
+
+    .subtitulo p {
+        font-size: 12px;
+    }
+
+    .lowcontainers h1 {
+        font-size: 30px;
+    }
+
+    .lowcontainers p {
+        font-size: 12px;
+        width: 95%;
+    }
+
+    .lowcontainers h3 {
+        font-size: 20px;
+    }
+.suporti {
+        width: 90%;
+        left: 0;
+        justify-content:center;
+        margin-bottom: 4%;
+    }
+
+    .suporti section {
+        width: 80%;
+        left: 0;
+        padding: 10px;
+    }
+
+    .mulher-fundo img {
+        width: 100%;
+        position: static;
+        bottom: auto;
+        right: auto;
+    }
+}
