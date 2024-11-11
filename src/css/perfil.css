@@ -272,22 +272,24 @@
 }
 .biografia-h2{
     position: relative;
-    font-size: 18px;
+    color: #000;
+    font-size: 22px;
     font-weight: 100;
     max-width: 400px;
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
     left: 5%;
-    top: -200px;
+    top: -297px;
 }
 .biografia-name{
+    color: #000;
     position: relative;
-    font-size: 25px;
+    font-size: 28px;
     font-weight: 100;
     max-width: 500px;
     font-family: Arial, Helvetica, sans-serif;
-    left: 39%;
-    bottom: 250px;
+    left: 37.8%;
+    bottom: 295px;
 }
 .low-images2 {
     position: relative;

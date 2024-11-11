@@ -89,6 +89,10 @@
     border: #fff;
 }
 
+.file-upload-button{
+    color: #FF4879
+};
+
 .CP-Cadastro:hover{
     transform: translateY(-5px);
 }
