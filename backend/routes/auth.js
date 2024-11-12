@@ -4,10 +4,39 @@ const bcrypt = require('bcrypt');
 const db = require('../config/db');
 const jwt = require('jsonwebtoken');
 
-router.post('/register', async (req, res) => {
-  const { nome, sobrenome, username, cpf, email, password, dataNascimento } = req.body;
+function verifyToken(req, res, next) {
+  const token = req.headers['authorization'];
+  if (!token) return res.status(403).json({ message: 'Token não fornecido' });
 
-  if (!nome || !sobrenome || !username || !cpf || !email || !password || !dataNascimento) {
+  jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+    if (err) return res.status(401).json({ message: 'Token inválido' });
+    req.userId = decoded.id;
+    next();
+  });
+}
+
+router.get('/profile', verifyToken, (req, res) => {
+  const userId = req.userId;
+  const getUserQuery = 'SELECT nome, sobrenome, username, email, data_nascimento, estilo_arte, biografia FROM usuarios WHERE id = ?';
+
+  db.query(getUserQuery, [userId], (err, results) => {
+    if (err) {
+      console.error('Erro ao buscar perfil do usuário:', err);
+      return res.status(500).json({ message: 'Erro no servidor.' });
+    }
+
+    if (results.length === 0) {
+      return res.status(404).json({ message: 'Usuário não encontrado.' });
+    }
+
+    const user = results[0];
+    res.status(200).json({ user });
+  });
+});
+
+router.post('/register', async (req, res) => {
+  const { nome, sobrenome, username, cpf, email, password, dataNascimento, estiloArte, biografia } = req.body;
+  if (!nome || !sobrenome || !username || !cpf || !email || !password || !dataNascimento || !estiloArte || !biografia) {
     return res.status(400).json({ message: 'Por favor, preencha todos os campos.' });
   }
 
@@ -25,12 +54,13 @@ router.post('/register', async (req, res) => {
     try {
       const saltRounds = 10;
       const hashedPassword = await bcrypt.hash(password, saltRounds);
-
       const [dia, mes, ano] = dataNascimento.split('/');
       const dataFormatada = `${ano}-${mes}-${dia}`;
 
-      const insertUserQuery = 'INSERT INTO usuarios (nome, sobrenome, username, cpf, email, senha, data_nascimento) VALUES (?, ?, ?, ?, ?, ?, ?)';
-      db.query(insertUserQuery, [nome, sobrenome, username, cpf, email, hashedPassword, dataFormatada], (err, result) => {
+      const insertUserQuery = `
+        INSERT INTO usuarios (nome, sobrenome, username, cpf, email, senha, data_nascimento, estilo_arte, biografia) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+      db.query(insertUserQuery, [nome, sobrenome, username, cpf, email, hashedPassword, dataFormatada, estiloArte, biografia], (err, result) => {
         if (err) {
           console.error('Erro ao registrar usuário:', err);
           return res.status(500).json({ message: 'Erro no servidor.' });

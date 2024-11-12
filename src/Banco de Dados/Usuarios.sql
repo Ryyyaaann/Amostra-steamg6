@@ -10,7 +10,16 @@ create table usuarios(
     cpf varchar(255) not null,
     email varchar(255) not null unique,
     senha varchar(255) not null,
-    data_nascimento date not null
+    data_nascimento date not null,
+    biografia text,
+    estilo_arte enum(
+        'Web Design', 'Fotografia', 'Jazz', 'Pintura', 'Escultura', 
+        'Cinema', 'Animação', 'Música Clássica', 'Dança', 'Teatro',
+        'Grafite', 'Moda', 'Arquitetura', 'Design de Interiores',
+        'Ilustração', 'Design de Produto', 'Arte Digital', 
+        'Desenvolvimento de Jogos', 'Escrita Criativa', 'Quadrinhos', 
+        'Arte Conceitual', 'Culinária', 'Outros'
+    ) not null
 )
 
 create table produtos(
@@ -19,10 +28,16 @@ create table produtos(
     preco decimal(10, 2) not null,
     quantidade int not null,
     autor varchar(254) not null,
-    descricao text
-)
-DESCRIBE produtos;
+    descricao text,
+    imagem_url VARCHAR(255),
+    id_user int,
 
+    foreign key(id_user) references usuarios(id_user)
+)
+
+DESCRIBE produtos
+
+select * from usuarios
 select * from produtos
-ALTER TABLE produtos MODIFY id_user int DEFAULT NULL;
-ALTER TABLE produtos ADD imagem_url VARCHAR(255);
+drop database mostra
+ALTER TABLE produtos ADD imagem_url VARCHAR(255)

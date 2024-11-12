@@ -34,7 +34,7 @@ class CP0 extends React.Component {
         formData.append("quantidade", quantidade);
         formData.append("autor", autor);
         formData.append("descricao", descricao);
-        formData.append("imagem", imagem);  // Adiciona a imagem ao formData
+        formData.append("imagem", imagem);
 
         try {
             const response = await axios.post('http://localhost:5000/api/produtos/cp0', formData, {

@@ -16,6 +16,8 @@ class Cadastro extends React.Component {
       password: '',
       confirmaPassword: '',
       dataNascimento: '',
+      estiloArte: '',
+      biografia: '',
       errorMessage: '',
       successMessage: '',
       showPassword: false,
@@ -56,48 +58,12 @@ class Cadastro extends React.Component {
     }
   }
 
-  isValidEmail = (email) => {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
-  }
-
-  isValidPassword = (password) => {
-    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,}$/;
-    return passwordPattern.test(password);
-  }
-
-  isValidDate = (date) => {
-    const datePattern = /^(\d{2})\/(\d{2})\/(\d{4})$/;
-    if (!datePattern.test(date)) return false;
-    const [day, month, year] = date.split('/');
-    const parsedDate = new Date(`${year}-${month}-${day}`);
-    const currentDate = new Date();
-    const minBirthDate = new Date(currentDate.getFullYear() - 120, currentDate.getMonth(), currentDate.getDate());
-    return parsedDate instanceof Date && !isNaN(parsedDate) && parsedDate <= currentDate && parsedDate >= minBirthDate;
-  }
-
   handleSubmit = async (event) => {
     event.preventDefault();
-    const { nome, sobrenome, username, cpf, email, password, confirmaPassword, dataNascimento } = this.state;
+    const { nome, sobrenome, username, cpf, email, password, confirmaPassword, dataNascimento, estiloArte, biografia } = this.state;
 
-    // Validações
     if (password !== confirmaPassword) {
       this.setState({ errorMessage: 'As senhas não coincidem.' });
-      return;
-    }
-
-    if (!this.isValidPassword(password)) {
-      this.setState({ errorMessage: 'A senha deve conter pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial, e ter no mínimo 8 caracteres.' });
-      return;
-    }
-
-    if (!this.isValidEmail(email)) {
-      this.setState({ errorMessage: 'Por favor, insira um e-mail válido.' });
-      return;
-    }
-
-    if (!this.isValidDate(dataNascimento)) {
-      this.setState({ errorMessage: 'Por favor, insira uma data de nascimento válida.' });
       return;
     }
 
@@ -109,7 +75,9 @@ class Cadastro extends React.Component {
         cpf,
         email,
         password,
-        dataNascimento
+        dataNascimento,
+        estiloArte,
+        biografia
       });
 
       this.setState({
@@ -121,6 +89,8 @@ class Cadastro extends React.Component {
         password: '',
         confirmaPassword: '',
         dataNascimento: '',
+        estiloArte: '',
+        biografia: '',
         errorMessage: '',
         successMessage: response.data.message
       });
@@ -161,7 +131,6 @@ class Cadastro extends React.Component {
             <br />
           </div>
           <div className='input-container'>
-
             <label for="nome">Apelido:</label>
             <input
               type="text"
@@ -178,7 +147,6 @@ class Cadastro extends React.Component {
             <br />
           </div>
           <div className='input-container'>
-
             <label for="nome">Email:</label>
             <input
               type="email"
@@ -194,9 +162,7 @@ class Cadastro extends React.Component {
             {validationErrors.email && <div className="error-message">{validationErrors.email}</div>}
             <br />
           </div>
-
           <div className='input-container'>
-
             <label for="nome">Nome de Usuário:</label>
             <input
               type="text"
@@ -213,7 +179,6 @@ class Cadastro extends React.Component {
             <br />
           </div>
           <div className='input-container'>
-
             <label for="nome">CPF:</label>
             <InputMask
               mask="999.999.999-99"
@@ -230,7 +195,43 @@ class Cadastro extends React.Component {
             <br />
           </div>
           <div className='input-container'>
-
+            <label htmlFor="estiloArte">Estilo de Arte:</label>
+            <select
+              id="estiloArte"
+              name="estiloArte"
+              required
+              value={this.state.estiloArte}
+              onChange={this.handleInputChange}
+              className={`form-item ${validationErrors.estiloArte ? 'error' : ''}`}
+            >
+              <option value="" disabled>Selecione seu estilo de arte</option>
+              <option value="Web Design">Web Design</option>
+              <option value="Fotografia">Fotografia</option>
+              <option value="Jazz">Jazz</option>
+              <option value="Pintura">Pintura</option>
+              <option value="Escultura">Escultura</option>
+              <option value="Cinema">Cinema</option>
+              <option value="Música Clássica">Música Clássica</option>
+              <option value="Dança">Dança</option>
+              <option value="Teatro">Teatro</option>
+              <option value="Grafite">Grafite</option>
+              <option value="Moda">Moda</option>
+              <option value="Arquitetura">Arquitetura</option>
+              <option value="Design de Interiores">Design de Interiores</option>
+              <option value="Ilustração">Ilustração</option>
+              <option value="Design de Produto">Design de Produto</option>
+              <option value="Arte Digital">Arte Digital</option>
+              <option value="Desenvolvimento de Jogos">Desenvolvimento de Jogos</option>
+              <option value="Escrita Criativa">Escrita Criativa</option>
+              <option value="Quadrinhos">Quadrinhos</option>
+              <option value="Arte Conceitual">Arte Conceitual</option>
+              <option value="Culinária">Culinária</option>
+              <option value="Outros">Outros</option>
+            </select>
+            {validationErrors.estiloArte && <div className="error-message">{validationErrors.estiloArte}</div>}
+            <br />
+          </div>
+          <div className='input-container'>
             <label for="nome">Senha:</label>
             <input
               type={showPassword ? "text" : "password"}
@@ -267,7 +268,6 @@ class Cadastro extends React.Component {
             <br />
           </div>
           <div className='input-container'>
-
             <label for="nome">Data de Nascimento:</label>
             <InputMask
               mask="99/99/9999"
@@ -285,6 +285,20 @@ class Cadastro extends React.Component {
             {this.state.errorMessage && <div className="error-message">{this.state.errorMessage}</div>}
             {this.state.successMessage && <div className="success-message">{this.state.successMessage}</div>}
             <br />
+
+          <div className='input-container'>
+            <label for='nome'>Biografia</label>
+            <textarea
+              id='biografia'
+              name='biografia'
+              placeholder='Insira sua biografia'
+              required
+              value={this.state.biografia}
+              onChange={this.handleInputChange}
+              onBlur={this.handleBlur}
+              className={`form-item ${validationErrors.biografia? 'error' : ''}`}
+              />
+          </div>
             <input className='form-submit-cadastro' type="submit" value="Cadastrar" />
           </div>
         </div>

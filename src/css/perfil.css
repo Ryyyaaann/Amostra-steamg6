@@ -221,28 +221,32 @@
     width: 230px;
     height: 270px;
     background-color: #f0f0f0;
-    margin-bottom: -8px;
+    margin-bottom: 10px;
     border-radius: 15px;
     box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.1);
 }
 
 .product-name {
+    transform: translateY(-52%);
     font-size: 1.2rem;
-    margin-bottom: -8px;
 }
 
 .product-description {
     font-size: 0.9rem;
     color: #666;
-    margin-bottom: -8px;
     max-width: 150px;
+    margin-top: 20px;
+    margin-bottom: -12px;
 }
 
 .product-price {
     font-size: 1rem;
     font-weight: bold;
-    margin-bottom: -5px;
+    margin-bottom: -12px;
+    margin-top: -13px;
+    transform: translateY(52%);
 }
+
 .product-image2 {
     width: 500px;
     height: 300px;

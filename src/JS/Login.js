@@ -35,24 +35,28 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+  
     if (!isValidEmailOrUsername(username)) {
       setErrorMessage('Por favor, insira um email ou username válido.');
       return;
     }
     setLoading(true);
+  
     try {
       const response = await axios.post('http://localhost:5000/api/auth/login', {
         username,
         password,
         rememberMe,
       });
+  
+      const token = response.data.token;
       
       if (rememberMe) {
-        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('token', token);
       } else {
-        sessionStorage.setItem('token', response.data.token);
+        sessionStorage.setItem('token', token);
       }
-      
+  
       setUsername('');
       setPassword('');
       setErrorMessage('');
@@ -62,8 +66,7 @@ const Login = () => {
     } finally {
       setLoading(false);
     }
-  };
-
+  };  
   return (
     <div className="tudoo">
       <img src={require('../assets/Group 43.png')} className='fundo-login' alt="fundo-geometrico" width={950}/>
