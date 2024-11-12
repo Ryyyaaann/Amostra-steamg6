@@ -7,7 +7,6 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: -15px;
 }
 
 .form-login {
@@ -20,6 +19,7 @@
     text-align: center;
     top: 10px;
     animation: fadeIn 0.7s ease-in-out;
+    
 }
 .fundo-login{
     position: relative;
@@ -27,6 +27,7 @@
     z-index: -1;
     opacity: 0%;
 }
+
 .form-titulo {
     font-size: 70px;
     font-family: Homenaje;
@@ -141,6 +142,21 @@ h4{
     background-color: #3949ab;
 }
 
+.lembre-me {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  .lembre-me input {
+    width: 18px;
+    height: 18px;
+    accent-color: #B95267; /* Cor personalizada para checkbox */
+  }
+  
 
 
 @keyframes fadeIn {

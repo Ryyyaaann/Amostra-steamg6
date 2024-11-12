@@ -19,6 +19,7 @@ import CP0 from './JS/Cadastro-p'
 import EditProduto from './JS/EditRemov.Js'
 import Carrinho from './JS/Carrinho.js';
 import DeleteProduto from './JS/Delete.js'
+import CommunityPage from './JS/artistas_negras.js'
 
 
 
@@ -46,6 +47,7 @@ function App() {
             <Route exact path="/Carrinho" element={<Carrinho/>} />
             <Route exact path="/EditRemov/:id" element={<EditProduto/>} />
             <Route exact path="/deletar/:id" element={<DeleteProduto/>} />
+            <Route exact path="/artistas_negras" element={<CommunityPage/>} />
           </Routes>
         <Footer/>
         </Router>

@@ -114,7 +114,6 @@ class Cadastro extends React.Component {
         </div>
         <div className='itens-form'>
           <div className='input-container'>
-
             <label for="nome">Nome:</label>
             <input
               type="text"
@@ -202,31 +201,15 @@ class Cadastro extends React.Component {
               required
               value={this.state.estiloArte}
               onChange={this.handleInputChange}
-              className={`form-item ${validationErrors.estiloArte ? 'error' : ''}`}
+              className={`form-item-s ${validationErrors.estiloArte ? 'error' : ''}`}
             >
-              <option value="" disabled>Selecione seu estilo de arte</option>
-              <option value="Web Design">Web Design</option>
-              <option value="Fotografia">Fotografia</option>
-              <option value="Jazz">Jazz</option>
-              <option value="Pintura">Pintura</option>
-              <option value="Escultura">Escultura</option>
-              <option value="Cinema">Cinema</option>
-              <option value="Música Clássica">Música Clássica</option>
-              <option value="Dança">Dança</option>
-              <option value="Teatro">Teatro</option>
-              <option value="Grafite">Grafite</option>
-              <option value="Moda">Moda</option>
-              <option value="Arquitetura">Arquitetura</option>
-              <option value="Design de Interiores">Design de Interiores</option>
-              <option value="Ilustração">Ilustração</option>
-              <option value="Design de Produto">Design de Produto</option>
-              <option value="Arte Digital">Arte Digital</option>
-              <option value="Desenvolvimento de Jogos">Desenvolvimento de Jogos</option>
-              <option value="Escrita Criativa">Escrita Criativa</option>
-              <option value="Quadrinhos">Quadrinhos</option>
-              <option value="Arte Conceitual">Arte Conceitual</option>
-              <option value="Culinária">Culinária</option>
-              <option value="Outros">Outros</option>
+              <option className = "Tipo_arte"value="" disabled>Selecione seu estilo de arte</option>
+              <option value="Outros">Artistas Negras</option>
+              <option value="Outros">LGBTQIAPN+</option>
+              <option value="Outros">Modelagem 3D</option>
+              <option value="Outros">Modelagem 2D</option>
+              <option value="Outros">Arte Realista</option>
+              <option value="Outros">Animação</option>
             </select>
             {validationErrors.estiloArte && <div className="error-message">{validationErrors.estiloArte}</div>}
             <br />
@@ -296,7 +279,7 @@ class Cadastro extends React.Component {
               value={this.state.biografia}
               onChange={this.handleInputChange}
               onBlur={this.handleBlur}
-              className={`form-item ${validationErrors.biografia? 'error' : ''}`}
+              className={`form-item-b ${validationErrors.biografia? 'error' : ''}`}
               />
           </div>
             <input className='form-submit-cadastro' type="submit" value="Cadastrar" />

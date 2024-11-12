@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import '../css/login.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaEye, FaEyeSlash, FaEnvelope, FaLock } from 'react-icons/fa';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -35,42 +35,42 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
+
     if (!isValidEmailOrUsername(username)) {
       setErrorMessage('Por favor, insira um email ou username válido.');
       return;
     }
     setLoading(true);
-  
+
     try {
       const response = await axios.post('http://localhost:5000/api/auth/login', {
         username,
         password,
         rememberMe,
       });
-  
-      const token = response.data.token;
-      
+
+      const { token, expiresIn, userId } = response.data;
+
       if (rememberMe) {
         localStorage.setItem('token', token);
+        localStorage.setItem('id_user', userId);
       } else {
         sessionStorage.setItem('token', token);
+        sessionStorage.setItem('id_user', userId);
       }
-  
-      setUsername('');
-      setPassword('');
-      setErrorMessage('');
-      navigate('/Loja');
+
+      alert('Login bem-sucedido!');
+      navigate('/perfil');
     } catch (error) {
-      setErrorMessage(error.response?.data?.message || 'Credenciais inválidas. Por favor, tente novamente.');
-    } finally {
-      setLoading(false);
+      console.error('Erro durante o login:', error);
+      alert('Erro ao fazer login. Verifique suas credenciais.');
     }
-  };  
+  };
+
   return (
     <div className="tudoo">
-      <img src={require('../assets/Group 43.png')} className='fundo-login' alt="fundo-geometrico" width={950}/>
-        <h2 className="form-titulo">Faça seu login</h2>
+      <img src={require('../assets/Group 43.png')} className="fundo-login" alt="fundo-geometrico" width={950} />
+      <h2 className="form-titulo">Faça seu login</h2>
       <form onSubmit={handleSubmit} className="form-login">
         <div className="input-group">
           <h4 className="input-title">Email</h4>
@@ -88,7 +88,7 @@ const Login = () => {
           <h4 className="input-title">Senha</h4>
           <input
             className="form-password"
-            type={showPassword ? "text" : "password"}
+            type={showPassword ? 'text' : 'password'}
             name="password"
             placeholder="Insira sua senha..."
             required
@@ -99,12 +99,26 @@ const Login = () => {
             {showPassword ? <FaEyeSlash /> : <FaEye />}
           </span>
         </div>
-        {errorMessage && <div className="error-message">{errorMessage}</div>}
         <div className="extras">
-      
-          <Link to="/esqueceu-senha" className="esqueceu-senha">Esqueceu sua senha?</Link>
+          <label className="lembre-me">
+            <input
+              type="checkbox"
+              checked={rememberMe}
+              onChange={handleCheckboxChange}
+            />
+            Lembre-me
+          </label>
+          <Link to="/esqueceu-senha" className="esqueceu-senha">
+            Esqueceu sua senha?
+          </Link>
         </div>
-        <input className="form-submit" type="submit" value={loading ? "Carregando..." : "Entrar"} disabled={loading} />
+        {errorMessage && <div className="error-message">{errorMessage}</div>}
+        <input
+          className="form-submit"
+          type="submit"
+          value={loading ? 'Carregando...' : 'Entrar'}
+          disabled={loading}
+        />
       </form>
     </div>
   );

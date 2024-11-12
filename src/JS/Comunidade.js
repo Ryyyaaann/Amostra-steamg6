@@ -1,5 +1,6 @@
 import React from "react";
 import '../css/comunidade.css';
+import { Link } from 'react-router-dom';
 
 
 function Comunidade() {
@@ -23,15 +24,15 @@ function Comunidade() {
                     />
                     <div className="card-content">
                         <div className="title-container">
+                        <Link to='/artistas_negras'>
                             <h2 className="card-title">Artistas Negras</h2>
+                        </Link>
                             <span className="verified-icon">
                                 <i className="fas fa-check-circle"></i>
                             </span>
                         </div>
                     </div>
                 </div>
-
-
                 <div className="card" style={{ backgroundColor: '#FF4D4D' }}>
                     <img
                         src={require('../assets/Rectangle 31.png')}

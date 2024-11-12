@@ -41,3 +41,5 @@ select * from usuarios
 select * from produtos
 drop database mostra
 ALTER TABLE produtos ADD imagem_url VARCHAR(255)
+
+DELETE FROM usuarios;

@@ -1,9 +1,6 @@
-//precisa colocar pra ver a pag por meio da url (esqueci como faz)
-
 import { useState } from 'react'
-import Image from 'next/image'
 import { MessageCircle, Users, Image as ImageIcon, Pencil, Send, Star } from 'lucide-react'
-import './artistas-negras.css'
+import '../css/artsitas_negras.css'
 
 export default function CommunityPage() {
     const [message, setMessage] = useState('')
@@ -21,6 +18,13 @@ export default function CommunityPage() {
     { id: 3, name: 'Beatriz Lima', status: 'offline', avatar: '/placeholder.svg?height=40&width=40' },
   ]
 
+  const messages = [
+    { id: 1, sender: members[0], content: 'Olá, pessoal! Alguém está trabalhando em algum projeto interessante no momento?', timestamp: '14:30' },
+    { id: 2, sender: members[1], content: 'Oi Maria! Estou começando uma série de pinturas inspiradas em mulheres negras na história. E você?', timestamp: '14:32' },
+    { id: 3, sender: members[0], content: 'Que incrível, Ana! Eu estou trabalhando em uma escultura que representa a força e resiliência das mulheres negras.', timestamp: '14:35' },
+    { id: 4, sender: members[2], content: 'Esses projetos parecem maravilhosos! Mal posso esperar para ver o resultado final.', timestamp: '14:40' },
+  ]
+
   return (
     <div className="community-container">
       <div className="sidebar">
@@ -28,10 +32,7 @@ export default function CommunityPage() {
           <h1 className="community-title">Artistas negras</h1>
           <div className="member-count">
             <span>10.989 membros</span>
-            <div className="member-count-dot" />
           </div>
-          <div className="decorative-circle-large" />
-          <div className="decorative-circle-small" />
         </div>
         
         <div className="channel-list">
@@ -56,9 +57,20 @@ export default function CommunityPage() {
           <Users className="channel-icon" />
         </div>
 
-        <div className="messages-container">
+       <div className="messages-container">
           <div className="decorative-circle-top-right" />
           <div className="decorative-circle-bottom-left" />
+          {messages.map((msg) => (
+            <div key={msg.id} className="message-item">
+              <div className="message-content">
+                <div className="message-header">
+                  <span className="message-sender">{msg.sender.name}</span>
+                  <span className="message-timestamp">{msg.timestamp}</span>
+                </div>
+                <p className="message-text">{msg.content}</p>
+              </div>
+            </div>
+          ))}
         </div>
 
         <div className="message-input-container">
@@ -91,13 +103,6 @@ export default function CommunityPage() {
         {members.map(member => (
           <div key={member.id} className="member-item">
             <div className="member-avatar-container">
-              <Image 
-                src={member.avatar} 
-                alt={member.name} 
-                width={40} 
-                height={40} 
-                className="member-avatar"
-              />
               <div className={`member-status ${member.status === 'online' ? 'member-status-online' : 'member-status-offline'}`} />
             </div>
             <span className="member-name">{member.name}</span>

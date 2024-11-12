@@ -15,24 +15,6 @@ function verifyToken(req, res, next) {
   });
 }
 
-router.get('/profile', verifyToken, (req, res) => {
-  const userId = req.userId;
-  const getUserQuery = 'SELECT nome, sobrenome, username, email, data_nascimento, estilo_arte, biografia FROM usuarios WHERE id = ?';
-
-  db.query(getUserQuery, [userId], (err, results) => {
-    if (err) {
-      console.error('Erro ao buscar perfil do usuário:', err);
-      return res.status(500).json({ message: 'Erro no servidor.' });
-    }
-
-    if (results.length === 0) {
-      return res.status(404).json({ message: 'Usuário não encontrado.' });
-    }
-
-    const user = results[0];
-    res.status(200).json({ user });
-  });
-});
 
 router.post('/register', async (req, res) => {
   const { nome, sobrenome, username, cpf, email, password, dataNascimento, estiloArte, biografia } = req.body;

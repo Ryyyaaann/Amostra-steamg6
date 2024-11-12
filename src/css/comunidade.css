@@ -106,24 +106,27 @@
   display:flex;
 }
 
-
 .title-container {
   position: relative; /* Para posicionar o selo */
   display: flex; /* Flexbox para alinhamento */
   align-items: center; /* Alinha verticalmente */
   width: 60%;
   padding: 10px; /* Preenchimento */
-  background-color: white; /* Cor do fundo do título */
+  background-color: rgb(255, 255, 255); /* Cor do fundo do título */
   border-radius: 20px; /* Bordas arredondadas */
   margin-bottom: -2px; /* Espaço entre título e participantes */
   margin-top: -20px;
 }
 
+.title-container a{
+  text-decoration: none;
+}
 
 .card-title {
   font-size: 1.5em;
   margin: 0;
   padding-right: 30px; /* Espaço para o ícone verificado */
+  color: black;
 }
 
 
@@ -192,5 +195,9 @@
   justify-content: center;
   align-items: center;
   width: 30px;
-} 
+}
+
+.member-item{
+  cursor: pointer;
+}
 
